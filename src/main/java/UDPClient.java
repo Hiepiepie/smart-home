@@ -3,14 +3,14 @@ import java.net.DatagramSocket;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.util.Random;
-import org.junit.runner.JUnitCore;
+
 
 
 
 abstract public class UDPClient extends Thread{
 
     public static void main(String[] args){
-        JUnitCore.runClasses(TestPrimer.class);
+
         Thermometer thermometer = new Thermometer();
         Light light = new Light();
         Hygrometer hygrometer = new Hygrometer();
@@ -29,22 +29,10 @@ abstract public class UDPClient extends Thread{
             while (true){
                 String msg = new String(getType() + update());
                 byte[] b = (msg).getBytes();
-                //byte[] inData = new byte[1024];
                 DatagramPacket dp = new DatagramPacket(b, b.length, ia, 1234);
                 ds.send(dp);
-                Thread.sleep(1000);
+                Thread.sleep(2000);
 
-//                ds.setSoTimeout(1000); //timeout
-//                //wait for data from Server
-//
-//                DatagramPacket recievePkt = new DatagramPacket(inData, inData.length);
-//
-////                System.out.println("ready receive message from server)");                         //Optional
-//
-//                ds.receive(recievePkt);
-//
-////                System.out.println("receive messag");                                             //Optional
-////                System.out.println("Replay from Server: " + new String(recievePkt.getData()));    //Optional
             }
         } catch( Exception e){
             e.printStackTrace();

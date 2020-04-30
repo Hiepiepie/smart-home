@@ -3,9 +3,12 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class UDPServerTest {
+public class UDPTest {
 
     @Test
     public void main() {
+        UDPClient uc = null;
+        UDPServer us = null;
+
     }
 }
