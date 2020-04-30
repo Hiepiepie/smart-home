@@ -4,14 +4,15 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LightTest {
-
+    Light l = new Light();
     @Test
     public void getType() {
-        Light l = new Light();
+
         assertEquals(l.getType(),"Brightness ");
     }
 
     @Test
     public void update() {
+        assertEquals(l.update().charAt(l.update().length()-1),'%');
     }
 }

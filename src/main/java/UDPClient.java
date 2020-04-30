@@ -3,11 +3,14 @@ import java.net.DatagramSocket;
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.util.Random;
+import org.junit.runner.JUnitCore;
+
 
 
 abstract public class UDPClient extends Thread{
 
     public static void main(String[] args){
+        JUnitCore.runClasses(TestPrimer.class);
         Thermometer thermometer = new Thermometer();
         Light light = new Light();
         Hygrometer hygrometer = new Hygrometer();
