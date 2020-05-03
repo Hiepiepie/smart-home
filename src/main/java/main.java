@@ -1,4 +1,5 @@
 import java.net.InetAddress;
+import java.util.Scanner;
 
 public class main {
 
@@ -9,9 +10,19 @@ public class main {
         Light light = new Light(port, ia);
         Hygrometer hygrometer = new Hygrometer(port, ia);
         UDPServer udpServer = new UDPServer(port, ia);
-        thermometer.start();
-        light.start();
-        hygrometer.start();
-        udpServer.start();
+        new Thread(thermometer).start();
+        new Thread(light).start();
+        new Thread(hygrometer).start();
+        new Thread(udpServer).start();
+        Scanner scanner = new Scanner(System.in);
+        String stop = "";
+        while(!(stop.equals("x"))) {
+            stop = scanner.next();
+        }
+            thermometer.stop();
+            light.stop();
+            hygrometer.stop();
+            udpServer.stop();
+        System.out.println("All Devices and Server are shutted down");
     }
 }

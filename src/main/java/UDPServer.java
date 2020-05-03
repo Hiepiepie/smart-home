@@ -4,28 +4,34 @@ import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.SocketException;
 
-public class UDPServer extends Thread{
-    private int port;
+public class UDPServer implements Runnable{
+    private volatile boolean exit;
     private InetAddress ia;
-    private DatagramSocket ds;
+    private final DatagramSocket ds;
     protected DatagramPacket dp;
     private byte[] buf = new byte[1024];
 
     public UDPServer(int port, InetAddress ia) throws SocketException{
-        this.port = port;
         this.ia = ia;
-        this.ds = new DatagramSocket(1234);
+        this.ds = new DatagramSocket(port);
+        exit = false;
     }
 
     public void run(){
+
+        System.out.println("Server Start");
         try{
-            while (true) {
+            while (!exit) {
                receivePackage();
             }
         }
         catch( Exception e){
             e.printStackTrace();
         }
+    }
+
+    public void stop(){
+        exit= true;
     }
 
     public void receivePackage() throws IOException {

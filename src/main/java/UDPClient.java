@@ -6,7 +6,8 @@ import java.net.SocketException;
 import java.util.Random;
 
 
-abstract public class UDPClient extends Thread {
+abstract public class UDPClient implements Runnable {
+    private volatile boolean exit;
     protected int port;
     protected InetAddress ia;
     protected DatagramSocket ds;
@@ -16,17 +17,23 @@ abstract public class UDPClient extends Thread {
     UDPClient() throws Exception {
         ds = new DatagramSocket();
         rand = new Random();
+        exit = false;
     }
 
     public void run() {
+        System.out.println("Client Start");
         try {
-            while (true) {
+            while (!exit) {
                 sendPackage();
                 Thread.sleep(2000);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void stop(){
+    exit = true;
     }
 
     public abstract String getType();
