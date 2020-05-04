@@ -5,6 +5,14 @@ import java.net.InetAddress;
 import java.net.SocketException;
 
 public class UDPServer implements Runnable{
+
+    public static void main(String[] args) throws Exception {
+        int port = Integer.parseInt(args[0]);
+        InetAddress ia = InetAddress.getByName(args[1]);
+        UDPServer udpServer = new UDPServer(port, ia);
+        new Thread(udpServer).start();
+    }
+
     private volatile boolean exit;
     private InetAddress ia;
     private final DatagramSocket ds;

@@ -1,5 +1,10 @@
 plugins {
     id 'java'
+    id 'application'
+}
+
+application {
+    mainClassName = project.hasProperty("main") ? getProperty("main") : "NULL"
 }
 
 group 'Adithana-Le'
@@ -8,6 +13,9 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 dependencies {
     testImplementation('junit:junit:4.13')
