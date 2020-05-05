@@ -1,8 +1,10 @@
+import UDPClientServer.Hygrometer;
+import UDPClientServer.Light;
+import UDPClientServer.Thermometer;
+import UDPClientServer.UDPServer;
 import org.junit.*;
 
-import java.io.IOException;
 import java.net.InetAddress;
-import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
@@ -19,10 +21,10 @@ public class UDPTest {
     public static void suiteSetup() throws Exception{
         port = 1234;
         ia = InetAddress.getLocalHost();
-        hygrometer = new Hygrometer(port, ia);
-        light = new Light(port, ia);
-        thermometer = new Thermometer(port, ia);
-        udpServer = new UDPServer(port, ia);
+        hygrometer = new Hygrometer();
+        light = new Light();
+        thermometer = new Thermometer();
+        udpServer = new UDPServer();
     }
 
     @AfterClass
@@ -37,26 +39,20 @@ public class UDPTest {
     public void HygrometerTest() throws Exception {
         hygrometer.sendPackage();
         udpServer.receivePackage();
-        String clientStr =  new String(hygrometer.dp.getData(), 0, hygrometer.dp.getLength());
-        String serverStr = new String(udpServer.dp.getData(), 0 ,udpServer.dp.getLength());
-        assertEquals(clientStr, serverStr);
+
     }
 
     @Test
     public void ThermometerTest() throws Exception {
         thermometer.sendPackage();
         udpServer.receivePackage();
-        String clientStr =  new String(thermometer.dp.getData(), 0, thermometer.dp.getLength());
-        String serverStr = new String(udpServer.dp.getData(), 0 ,udpServer.dp.getLength());
-        assertEquals(clientStr, serverStr);
+
     }
 
     @Test
     public void LightTest() throws Exception {
         light.sendPackage();
         udpServer.receivePackage();
-        String clientStr =  new String(light.dp.getData(), 0, light.dp.getLength());
-        String serverStr = new String(udpServer.dp.getData(), 0 ,udpServer.dp.getLength());
-        assertEquals(serverStr, clientStr);
+
     }
 }

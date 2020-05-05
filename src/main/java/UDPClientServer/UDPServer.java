@@ -1,42 +1,32 @@
-import java.io.IOException;
-import java.net.DatagramSocket;
-import java.net.DatagramPacket;
-import java.net.InetAddress;
-import java.net.SocketException;
+package UDPClientServer;
 
-public class UDPServer implements Runnable{
+import java.io.IOException;
+import java.net.*;
+
+public class UDPServer{
 
     public static void main(String[] args) throws Exception {
-        int port = Integer.parseInt(args[0]);
-        InetAddress ia = InetAddress.getByName(args[1]);
-        UDPServer udpServer = new UDPServer(port, ia);
-        new Thread(udpServer).start();
+        UDPServer udpServer = new UDPServer();
+        while (true)
+        udpServer.receivePackage();
+
+
     }
 
     private volatile boolean exit;
     private InetAddress ia;
     private final DatagramSocket ds;
     protected DatagramPacket dp;
+    final int port = 1234;
     private byte[] buf = new byte[1024];
 
-    public UDPServer(int port, InetAddress ia) throws SocketException{
-        this.ia = ia;
+    public UDPServer() throws SocketException, UnknownHostException {
+        ia = InetAddress.getLocalHost();
         this.ds = new DatagramSocket(port);
         exit = false;
     }
 
-    public void run(){
 
-        System.out.println("Server Start");
-        try{
-            while (!exit) {
-               receivePackage();
-            }
-        }
-        catch( Exception e){
-            e.printStackTrace();
-        }
-    }
 
     public void stop(){
         exit= true;

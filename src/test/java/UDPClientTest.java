@@ -1,3 +1,6 @@
+import UDPClientServer.Hygrometer;
+import UDPClientServer.Light;
+import UDPClientServer.Thermometer;
 import org.junit.Test;
 import org.junit.BeforeClass;
 import org.junit.AfterClass;
@@ -19,9 +22,9 @@ public class UDPClientTest {
         // Set up something for the test cycle
         port = 1234;
         ia = InetAddress.getLocalHost();
-        hygrometer = new Hygrometer(port, ia);
-        light = new Light(port, ia);
-        thermometer = new Thermometer(port, ia);
+        hygrometer = new Hygrometer();
+        light = new Light();
+        thermometer = new Thermometer();
     }
 
     @AfterClass
