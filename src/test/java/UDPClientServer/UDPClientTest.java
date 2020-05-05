@@ -1,3 +1,5 @@
+package UDPClientServer;
+
 import UDPClientServer.Hygrometer;
 import UDPClientServer.Light;
 import UDPClientServer.Thermometer;
@@ -47,21 +49,21 @@ public class UDPClientTest {
         int hum = hygrometer.getHum();
         assertTrue(hum<=100 && hum >= 0);
         for (int i = 0; i <= 10 ; i++)
-            hygrometer.update();
+            hygrometer.getInfoUpdate();
         hum = hygrometer.getHum();
         assertTrue(hum<=100 && hum >= 0);
 
         int bright = light.getBright();
         assertTrue(bright<=100 && bright >= 0);
         for (int i = 0; i <= 10 ; i++)
-            light.update();
+            light.getInfoUpdate();
         bright = light.getBright();
         assertTrue(bright<=100 && bright >= 0);
 
         int temp = thermometer.getTemp();
         assertTrue(temp<=40 && temp >= -5);
         for (int i = 0; i <= 10 ; i++)
-            thermometer.update();
+            thermometer.getInfoUpdate();
         temp = thermometer.getTemp();
         assertTrue(temp<=40 && temp >= -5);
     }
