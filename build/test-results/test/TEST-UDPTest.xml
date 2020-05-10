@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UDPTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-03T18:22:36" hostname="DESKTOP-MUT6QI6" time="0.027">
+  <properties/>
+  <testcase name="LightTest" classname="UDPTest" time="0.025"/>
+  <testcase name="ThermometerTest" classname="UDPTest" time="0.0"/>
+  <testcase name="HygrometerTest" classname="UDPTest" time="0.001"/>
+  <system-out><![CDATA[Server-> IP : /10.168.40.201 | Port : 58969 | Information : Brightness 61%
+
+Server-> IP : /10.168.40.201 | Port : 58970 | Information : Temperatur 22 Â°Celcius
+
+Server-> IP : /10.168.40.201 | Port : 58968 | Information : Humidity 82%
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

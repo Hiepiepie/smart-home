@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="UDPClientServer.UDPTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-05-10T17:35:15" hostname="DESKTOP-MUT6QI6" time="0.008">
+  <properties/>
+  <testcase name="hygrometerTest" classname="UDPClientServer.UDPTest" time="0.004"/>
+  <testcase name="packetLossCheckTest" classname="UDPClientServer.UDPTest" time="0.002"/>
+  <testcase name="thermometerTest" classname="UDPClientServer.UDPTest" time="0.001"/>
+  <testcase name="lightTest" classname="UDPClientServer.UDPTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
