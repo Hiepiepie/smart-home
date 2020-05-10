@@ -13,6 +13,15 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
+reporting.baseDir = "my-reports"
+testResultsDirName = "$buildDir/my-test-results"
+
+task showDirs {
+    doLast {
+        logger.quiet(rootDir.toPath().relativize(project.reportsDir.toPath()).toString())
+        logger.quiet(rootDir.toPath().relativize(project.testResultsDir.toPath()).toString())
+    }
+}
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
