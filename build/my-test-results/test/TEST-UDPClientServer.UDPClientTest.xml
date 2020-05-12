@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UDPClientServer.UDPClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-10T17:35:15" hostname="DESKTOP-MUT6QI6" time="0.003">
-  <properties/>
-  <testcase name="updateTest" classname="UDPClientServer.UDPClientTest" time="0.002"/>
-  <testcase name="getTypeTest" classname="UDPClientServer.UDPClientTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
