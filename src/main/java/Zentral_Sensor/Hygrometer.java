@@ -25,7 +25,7 @@ public class Hygrometer extends UDPClient{
     }
 
     public String getType(){
-        return "Humidity ";
+        return "Humidity";
     }
 
     public String getInfoUpdate() {

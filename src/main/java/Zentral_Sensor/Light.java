@@ -25,7 +25,7 @@ public class Light extends UDPClient{
     }
 
     public String getType(){
-        return "Brightness ";
+        return "Brightness";
     }
 
     public String getInfoUpdate() {

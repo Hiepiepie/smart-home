@@ -25,14 +25,14 @@ public class Thermometer extends  UDPClient{
     }
 
     public String getType(){
-        return "Temperatur ";
+        return "Temperatur";
     }
 
     public String getInfoUpdate() {
         temp += (rand.nextBoolean() ? 1 : -1);
         if(temp >= 40) temp -= 1;
         if(temp <= -5) temp += 1;
-        return temp + " °Celcius";
+        return temp + " Grad Celcius";
     }
 
 }
