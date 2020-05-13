@@ -22,16 +22,7 @@ public class mainClass {
         pHygrometer.waitFor();
         pLight.waitFor();
         pThermometer.waitFor();
-//        String stop = "";
-//        while(!(stop.equals("x"))) {
-//
-//        }
-//
-//        pHygrometer.destroy();
-//        pLight.destroy();
-//        pThermometer.destroy();
-//        pUDPServer.destroy();
-//        System.out.println("All Devices and Server are shutted down");
+
     }
 }
 
