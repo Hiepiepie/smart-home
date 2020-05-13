@@ -1,4 +1,4 @@
-package UDPClientServer;
+package Zentral_Sensor;
 
 import org.junit.*;
 
@@ -6,7 +6,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.net.InetAddress;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 //Test to send and receive packages between Client and Server
@@ -14,7 +13,7 @@ public class UDPTest {
     private static Hygrometer hygrometer;
     private static Light light;
     private static Thermometer thermometer;
-    private static UDPServer udpServer;
+    private static Zentral zentral;
     private static int port;
     private static InetAddress ia;
     private static String msg;
@@ -31,7 +30,7 @@ public class UDPTest {
         hygrometer = new Hygrometer();
         light = new Light();
         thermometer = new Thermometer();
-        udpServer = new UDPServer();
+        zentral = new Zentral();
         msg = "Test Message";
     }
 
@@ -40,15 +39,15 @@ public class UDPTest {
         hygrometer = null;
         light = null;
         thermometer = null;
-        udpServer = null;
+        zentral = null;
     }
 
     @Test
     public void hygrometerTest() throws Exception {
         hygrometer.sendPackage(msg);
-        udpServer.receivePackage();
+        zentral.receivePackage();
         //String clientStr =  new String(hygrometer.getDp().getData(), 0, hygrometer.getDp().getLength());
-        String serverStr = new String(udpServer.dp.getData(), 0 ,udpServer.dp.getLength());
+        String serverStr = new String(zentral.dp.getData(), 0 , zentral.dp.getLength());
         assertEquals(msg, serverStr);
 
     }
@@ -56,9 +55,9 @@ public class UDPTest {
     @Test
     public void thermometerTest() throws Exception {
         thermometer.sendPackage(msg);
-        udpServer.receivePackage();
+        zentral.receivePackage();
         //String clientStr =  new String(thermometer.getDp().getData(), 0, thermometer.getDp().getLength());
-        String serverStr = new String(udpServer.dp.getData(), 0 ,udpServer.dp.getLength());
+        String serverStr = new String(zentral.dp.getData(), 0 , zentral.dp.getLength());
         assertEquals(msg, serverStr);
 
     }
@@ -66,9 +65,9 @@ public class UDPTest {
     @Test
     public void lightTest() throws Exception {
         light.sendPackage(msg);
-        udpServer.receivePackage();
+        zentral.receivePackage();
         //String clientStr =  new String(light.getDp().getData(), 0, light.getDp().getLength());
-        String serverStr = new String(udpServer.dp.getData(), 0 ,udpServer.dp.getLength());
+        String serverStr = new String(zentral.dp.getData(), 0 , zentral.dp.getLength());
         assertEquals(msg, serverStr);
 
     }
@@ -81,16 +80,16 @@ public class UDPTest {
         // test if method "packetCheck()" works properly
         String msg = hygrometer.getId() + ";" + hygrometer.getType() + ";" + hygrometer.getInfoUpdate();
         hygrometer.sendPackage(msg);
-        udpServer.receivePackage();
-        udpServer.extractPackage();
-        udpServer.packetCheck();
+        zentral.receivePackage();
+        zentral.extractPackage();
+        zentral.packetCheck();
 
         //skip 1 id to make a fake packet loss
         msg = (hygrometer.getId()+1) + ";" + hygrometer.getType() + ";" + hygrometer.getInfoUpdate();
         hygrometer.sendPackage(msg);
-        udpServer.receivePackage();
-        udpServer.extractPackage();
-        udpServer.packetCheck();
+        zentral.receivePackage();
+        zentral.extractPackage();
+        zentral.packetCheck();
         assertEquals(ANSI_RED + "Packet loss detected", outContent.toString().substring(0,25));
     }
 }

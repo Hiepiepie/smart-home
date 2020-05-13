@@ -1,4 +1,4 @@
-package UDPClientServer;
+package Zentral_Sensor;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

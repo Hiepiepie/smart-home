@@ -1,4 +1,4 @@
-package UDPClientServer;
+package Zentral_Sensor;
 
 public class Light extends UDPClient{
 

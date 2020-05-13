@@ -1,4 +1,4 @@
-package UDPClientServer;
+package Zentral_Sensor;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
