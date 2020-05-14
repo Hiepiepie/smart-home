@@ -22,7 +22,6 @@ public class mainClass {
         pHygrometer.waitFor();
         pLight.waitFor();
         pThermometer.waitFor();
-
     }
 }
 
