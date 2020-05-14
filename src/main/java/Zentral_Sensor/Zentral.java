@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashMap;
 
-public class Zentral {
+public class Zentral{
     //---------------------------------------------------------------- START UDP
         String separator = File.separator;
         private InetAddress ia;
@@ -82,7 +82,7 @@ public class Zentral {
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
-            out.println(d + "\n" + s1 + " " + s2 );
+            out.println(d + "\n" + s1 + " " + s2 +"\r");
 
         } catch (IOException e) {
             //exception handling left as an exercise for the reader
@@ -111,15 +111,22 @@ public class Zentral {
     //-------------------------------------------------------------------- HTTP-TCP
 
     public void listening_HTTP_GET(Zentral zentral) throws IOException, URISyntaxException {
+        String PATH = "src" + separator + "main" + separator + "resources" + separator + typeClient+ separator + "log.html";
 
         ServerSocket server = new ServerSocket(8080);
         System.out.println("Listening for connection on port 8080 ....");
 
         while (true) {
+            zentral.receivePackage();
+            zentral.extractPackage();
+            zentral.packetCheck();
+            zentral.printInformation();
+
             try (Socket socket = server.accept()) {                 //open connection HTTP-GET
                 Date today = new Date();
                 logHTTPRequest(socket);
-                String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today; // give the data here
+                File myFile = new File(PATH);
+                String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" ; // give the data here
                 socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
             }
         }
@@ -141,13 +148,8 @@ public class Zentral {
     //--------------------------------------------------------------------- main
     public static void main(String[] args) throws Exception {
         Zentral zentral = new Zentral();
-//        zentral.listening_HTTP_GET(zentral);
-        while (true){
-            zentral.receivePackage();
-            zentral.extractPackage();
-            zentral.packetCheck();
-            zentral.printInformation();
-        }
-
+        zentral.listening_HTTP_GET(zentral);
     }
+
+
 }

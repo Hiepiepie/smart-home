@@ -1,5 +1,7 @@
 package Zentral_Sensor;
 
+import java.net.URI;
+
 public class Thermometer extends  UDPClient{
 
     public static void main(String[] args) throws Exception {
@@ -10,7 +12,7 @@ public class Thermometer extends  UDPClient{
             // ex : 122;Humidity;50%
             String msg = h.getId() + ";" + h.getType()+ ";" + h.getInfoUpdate();
             h.sendPackage(msg);
-//            Thread.sleep(1000);
+
         }
     }
 
