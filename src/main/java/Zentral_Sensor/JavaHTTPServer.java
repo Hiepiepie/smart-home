@@ -1,6 +1,7 @@
 package Zentral_Sensor;
 
 import java.io.*;
+import java.lang.invoke.SwitchPoint;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
@@ -74,20 +75,7 @@ public class JavaHTTPServer implements Runnable{
 
             // we support only GET and HEAD methods, we check
             if (!method.equals("GET")  &&  !method.equals("HEAD")) {
-                if (verbose) {
-                    System.out.println("501 Not Implemented : " + method + " method.");
-                }
-
-                // we return the not supported file to the client
-                File file = new File(WEB_ROOT, METHOD_NOT_SUPPORTED);
-                int fileLength = (int) file.length();
-                String contentMimeType = "text/html";
-                //read content to return to client
-                byte[] fileData = readFileData(file, fileLength);
-
-                // we send HTTP Headers with data to client
-                out.println("HTTP/1.1 501 Not Implemented");
-                outHeader(out, dataOut, fileLength, contentMimeType, fileData);
+                handleNotSupported(out, dataOut, method);
 
             } else {
                 // GET or HEAD method
@@ -95,17 +83,7 @@ public class JavaHTTPServer implements Runnable{
                     fileRequested += DEFAULT_FILE;
                 }
 
-                File file = new File(WEB_ROOT, fileRequested);
-                int fileLength = (int) file.length();
-                String content = getContentType(fileRequested);
-
-                if (method.equals("GET")) { // GET method so we return content
-                    byte[] fileData = readFileData(file, fileLength);
-
-                    // send HTTP Headers
-                    out.println("HTTP/1.1 200 OK");
-                    outHeader(out, dataOut, fileLength, content, fileData);
-                }
+                String content = handleGetHead(out, dataOut, fileRequested, method);
 
                 if (verbose) {
                     System.out.println("File " + fileRequested + " of type " + content + " returned");
@@ -138,6 +116,99 @@ public class JavaHTTPServer implements Runnable{
         }
 
 
+    }
+
+    private String handleGetHead(PrintWriter out, BufferedOutputStream dataOut, String fileRequested, String method) throws IOException {
+        String content;
+        switch(fileRequested) {
+            case "/thermometer":
+            {
+                File parent = new File("src/main/resources/Temperatur");
+                File file = new File(parent, "log.html");
+                int fileLength = (int) file.length();
+                content = getContentType(fileRequested+".html");
+
+                if (method.equals("GET")) { // GET method so we return content
+                    byte[] fileData = readFileData(file, fileLength);
+                    // send HTTP Headers
+                    out.println("HTTP/1.1 200 OK");
+                    outHeader(out, dataOut, fileLength, content, fileData);
+                }
+                break;
+            }
+            case "/hygrometer":
+            {
+                File parent = new File("src/main/resources/Humidity");
+                File file = new File(parent, "log.html");
+                int fileLength = (int) file.length();
+                content = getContentType(fileRequested+".html");
+
+                if (method.equals("GET")) { // GET method so we return content
+                    byte[] fileData = readFileData(file, fileLength);
+                    // send HTTP Headers
+                    out.println("HTTP/1.1 200 OK");
+                    outHeader(out, dataOut, fileLength, content, fileData);
+                }
+                break;
+            }
+            case "/light":
+            {
+                File parent = new File("src/main/resources/Brightness");
+                File file = new File(parent, "log.html");
+                int fileLength = (int) file.length();
+                content = getContentType(fileRequested+".html");
+
+                if (method.equals("GET")) { // GET method so we return content
+                    byte[] fileData = readFileData(file, fileLength);
+                    // send HTTP Headers
+                    out.println("HTTP/1.1 200 OK");
+                    outHeader(out, dataOut, fileLength, content, fileData);
+                }
+                break;
+            }
+            default:{
+                File file = new File(WEB_ROOT, fileRequested);
+                int fileLength = (int) file.length();
+                content = getContentType(fileRequested);
+
+                if (method.equals("GET")) { // GET method so we return content
+                    byte[] fileData = readFileData(file, fileLength);
+                    // send HTTP Headers
+                    out.println("HTTP/1.1 200 OK");
+                    outHeader(out, dataOut, fileLength, content, fileData);
+                }
+                break;
+            }
+        }
+//        File file = new File(WEB_ROOT, fileRequested);
+//        int fileLength = (int) file.length();
+//        String content = getContentType(fileRequested);
+//
+//        if (method.equals("GET")) { // GET method so we return content
+//            byte[] fileData = readFileData(file, fileLength);
+//            // send HTTP Headers
+//            out.println("HTTP/1.1 200 OK");
+//            outHeader(out, dataOut, fileLength, content, fileData);
+//        }
+
+        return content;
+    }
+
+    private void handleNotSupported(PrintWriter out, BufferedOutputStream dataOut, String method) throws IOException {
+        if (verbose) {
+            System.out.println("501 Not Implemented : " + method + " method.");
+        }
+
+        // we return the not supported file to the client
+        File file = new File(WEB_ROOT, METHOD_NOT_SUPPORTED);
+        int fileLength = (int) file.length();
+        String contentMimeType = "text/html";
+        //read content to return to client
+        byte[] fileData = readFileData(file, fileLength);
+
+        // we send HTTP Headers with data to client
+        out.println("HTTP/1.1 501 Not Implemented");
+        outHeader(out, dataOut, fileLength, contentMimeType, fileData);
     }
 
     private byte[] readFileData(File file, int fileLength) throws IOException {
