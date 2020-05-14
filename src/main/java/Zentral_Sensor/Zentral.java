@@ -1,15 +1,17 @@
 package Zentral_Sensor;
 
+
+
 import java.io.*;
 import java.net.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Date;
-import java.util.HashMap;
+import java.util.*;
 
-public class Zentral{
-    //---------------------------------------------------------------- START UDP
+public class Zentral implements Runnable{
+
+
         String separator = File.separator;
         private InetAddress ia;
         private final DatagramSocket ds;
@@ -26,18 +28,44 @@ public class Zentral{
         protected String infoClient;
         public static final String ANSI_RED = "\u001B[31m";
         public static final String ANSI_RESET = "\u001B[0m";
-        private int dataID;
-
         File oFile;
 
 
+    //--------------------------------------------------------------------- main
+    public static void main(String[] args) throws Exception {
+
+        int PORT = 8080;
+        try {
+
+            ServerSocket serverConnect = new ServerSocket(PORT);
+            System.out.println("Server started.\nListening for connections on port : " + PORT + " ...\n");
+            Zentral zentral = new Zentral();
+            Thread myUDP = new Thread(zentral);
+            myUDP.start();
+
+            // we listen until user halts server execution
+            while (true) {
+
+                JavaHTTPServer myServer = new JavaHTTPServer(serverConnect.accept());
+                Thread myHTTP = new Thread(myServer);
+                myHTTP.start();
+            }
+
+
+        } catch (IOException e) {
+            System.err.println("Server Connection error : " + e.getMessage());
+        }
+    }
+
+
+    //---------------------------------------------------------------------- START UDP
+
     public Zentral() throws IOException {
+
         ia = InetAddress.getLocalHost();
         this.ds = new DatagramSocket(port);
-
         checkBuffer = new HashMap<>();
         dp = new DatagramPacket(buf, buf.length, ia, port);
-
     }
 
 
@@ -82,9 +110,10 @@ public class Zentral{
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw))
         {
-            out.println(d + "\n" + s1 + " " + s2 +"\r");
+            out.println("<br><br><br><br><br>********************************************<br>"+d + "<br>" + "<p style=\"color: orangered\">"+s1 + " " + s2 +"</p>");
 
         } catch (IOException e) {
+            e.printStackTrace();
             //exception handling left as an exercise for the reader
         }
     }
@@ -106,50 +135,26 @@ public class Zentral{
         public void printInformation () {
         System.out.println(ANSI_RESET + "Server-> IP : " + iaClient + " | Port : " + port + " | " + typeClient + " Information : " + infoClient + " --- ID: " + idClient + "\n");
     }
-    //--------------------------------------------------------------------- END UDP
 
-    //-------------------------------------------------------------------- HTTP-TCP
-
-    public void listening_HTTP_GET(Zentral zentral) throws IOException, URISyntaxException {
-        String PATH = "src" + separator + "main" + separator + "resources" + separator + typeClient+ separator + "log.html";
-
-        ServerSocket server = new ServerSocket(8080);
-        System.out.println("Listening for connection on port 8080 ....");
-
+    @Override
+    public void run() {
         while (true) {
-            zentral.receivePackage();
-            zentral.extractPackage();
-            zentral.packetCheck();
-            zentral.printInformation();
-
-            try (Socket socket = server.accept()) {                 //open connection HTTP-GET
-                Date today = new Date();
-                logHTTPRequest(socket);
-                File myFile = new File(PATH);
-                String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" ; // give the data here
-                socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
+            try {
+                this.receivePackage();
+                this.extractPackage();
+                this.packetCheck();
+                this.printInformation();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
-
     }
 
-    private void logHTTPRequest(Socket socket) throws IOException {
-        InputStreamReader isr =  new InputStreamReader(socket.getInputStream());
-        BufferedReader reader = new BufferedReader(isr);
-        String line = reader.readLine();
 
-        while (!line.isEmpty()) {
-            System.out.println(line);
-            line = reader.readLine();
-        }
-
-    }
-
-    //--------------------------------------------------------------------- main
-    public static void main(String[] args) throws Exception {
-        Zentral zentral = new Zentral();
-        zentral.listening_HTTP_GET(zentral);
-    }
 
 
 }
+
+
+
+

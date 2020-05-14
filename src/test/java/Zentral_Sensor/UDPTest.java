@@ -5,6 +5,8 @@ import org.junit.*;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 import static org.junit.Assert.assertEquals;
 
@@ -25,7 +27,7 @@ public class UDPTest {
 
     @BeforeClass
     public static void suiteSetup() throws Exception{
-        port = 1234;
+        port = 1234;;
         ia = InetAddress.getLocalHost();
         hygrometer = new Hygrometer();
         light = new Light();

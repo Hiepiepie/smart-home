@@ -1,10 +1,11 @@
 package Zentral_Sensor;
 
 
+
+
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.URI;
 import java.util.Random;
 
 
@@ -16,7 +17,7 @@ public abstract class UDPClient {
     protected Random rand;
     protected byte[] buffer;
     protected int id;
-    protected URI uri;
+
 
     public UDPClient() throws Exception{
         ia = InetAddress.getLocalHost();
