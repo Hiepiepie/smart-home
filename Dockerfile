@@ -23,7 +23,7 @@ COPY settings-docker.xml /usr/share/maven/ref/
 
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
 CMD ["mvn"]
-
+EXPOSE 8080
 COPY . .
 ENTRYPOINT ["java","-cp","target/classes","mainClass"]
 

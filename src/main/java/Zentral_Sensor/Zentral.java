@@ -49,9 +49,8 @@ public class Zentral implements Runnable{
                 JavaHTTPServer myServer = new JavaHTTPServer(serverConnect.accept());
                 Thread myHTTP = new Thread(myServer);
                 myHTTP.start();
+
             }
-
-
         } catch (IOException e) {
             System.err.println("Server Connection error : " + e.getMessage());
         }
