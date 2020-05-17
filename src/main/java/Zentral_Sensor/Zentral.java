@@ -73,6 +73,7 @@ public class Zentral implements Runnable{
         dp = new DatagramPacket(buf, buf.length);
         ds.receive(dp);
         msg = new String(dp.getData(), 0, dp.getLength());
+
     }
 
         public void extractPackage () throws IOException {
@@ -83,10 +84,10 @@ public class Zentral implements Runnable{
         typeClient = msgArray[1];
         infoClient = msgArray[2];
             Date today = new Date();
-            saveData(today,typeClient,infoClient);
+            saveData(today,typeClient,infoClient,idClient);
         }
 
-    private void saveData(Date d,String s1, String s2) throws IOException {
+    private void saveData(Date date,String type, String info, int idClient) throws IOException {
         separator = System.getProperty("file.separator");
         String PATH = "src" + separator + "main" + separator + "resources" + separator + typeClient+ separator + "log.html";
         Path path = Paths.get(PATH);
@@ -94,9 +95,9 @@ public class Zentral implements Runnable{
             if (Files.notExists(path)) {
                 oFile = new File(PATH);
                 oFile.createNewFile();
-                appendToFile(d, s1, s2, PATH);
+                appendToFile(date, type, info, idClient, PATH);
             } else {
-                appendToFile(d, s1, s2, PATH);
+                appendToFile(date, type, info, idClient, PATH);
             }
         } catch ( Exception e){
             e.printStackTrace();
@@ -104,12 +105,28 @@ public class Zentral implements Runnable{
 
     }
 
-    private void appendToFile(Date d, String s1, String s2, String PATH) {
+    private void appendToFile(Date date, String type, String info, int idClient, String PATH) {
+        String device;
+        switch (type){
+            case("Temperatur"):
+                device = "thermometer";
+                break;
+
+            case("Brightness"):
+                device = "light";
+                break;
+
+            case("Humidity"):
+                device = "hygrometer";
+                break;
+
+            default: device = " ";
+        }
         try(FileWriter fw = new FileWriter(PATH, true);
             BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter out = new PrintWriter(bw))
-        {
-            out.println("<br><br><br><br><br>********************************************<br>"+d + "<br>" + "<p style=\"color: orangered\">"+s1 + " " + s2 +"</p>");
+            PrintWriter out = new PrintWriter(bw)) {
+            out.println("<br><br><br><br><br>********************************************<br>"
+                + "<a href=\"http://localhost:8080/" + device + "/id=" + idClient + "\"> " + date + " </a><br>" + "<p style=\"color: orangered\">"+type + " " + info + " | ID : " + idClient +"</p>" );
 
         } catch (IOException e) {
             e.printStackTrace();

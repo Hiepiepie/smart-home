@@ -36,9 +36,9 @@ public class UDPClientTest {
     @Test
     public void getTypeTest() {
         // Test each derived Class
-        assertEquals(hygrometer.getType(), "Humidity ");
-        assertEquals(thermometer.getType(), "Temperatur ");
-        assertEquals(light.getType(),"Brightness ");
+        assertEquals(hygrometer.getType(), "Humidity");
+        assertEquals(thermometer.getType(), "Temperatur");
+        assertEquals(light.getType(),"Brightness");
     }
 
     @Test

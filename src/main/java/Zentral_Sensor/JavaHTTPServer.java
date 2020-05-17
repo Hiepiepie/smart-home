@@ -4,7 +4,9 @@ import java.io.*;
 import java.lang.invoke.SwitchPoint;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.StringTokenizer;
 
 
@@ -120,11 +122,27 @@ public class JavaHTTPServer implements Runnable{
 
     private String handleGetHead(PrintWriter out, BufferedOutputStream dataOut, String fileRequested, String method) throws IOException {
         String content;
+        String dataRequested = "0";
+        System.out.println(fileRequested);
+        System.out.println(dataRequested);
+        if(fileRequested.contains("/id")){
+            dataRequested = fileRequested.substring(fileRequested.indexOf("=")+1, fileRequested.length());
+            fileRequested = fileRequested.substring(0,fileRequested.indexOf("/id"));
+            System.out.println(fileRequested);
+            System.out.println(dataRequested);
+        }
         switch(fileRequested) {
             case "/thermometer":
             {
-                File parent = new File("src/main/resources/Temperatur");
-                File file = new File(parent, "log.html");
+                File parent;
+                File file;
+                if(searchSensorData("src/main/resources/Temperatur/log.html", dataRequested)){
+                    parent = new File("src/main/resources");
+                    file = new File(parent, "data.html");
+                } else {
+                    parent = new File("src/main/resources/Temperatur");
+                    file = new File(parent, "log.html");
+                }
                 int fileLength = (int) file.length();
                 content = getContentType(fileRequested+".html");
 
@@ -138,8 +156,16 @@ public class JavaHTTPServer implements Runnable{
             }
             case "/hygrometer":
             {
-                File parent = new File("src/main/resources/Humidity");
-                File file = new File(parent, "log.html");
+                File parent;
+                File file;
+                if(searchSensorData("src/main/resources/Humidity/log.html", dataRequested)){
+                    parent = new File("src/main/resources");
+                    file = new File(parent, "data.html");
+
+                } else{
+                    parent = new File("src/main/resources/Humidity");
+                    file = new File(parent, "log.html");
+                }
                 int fileLength = (int) file.length();
                 content = getContentType(fileRequested+".html");
 
@@ -153,8 +179,15 @@ public class JavaHTTPServer implements Runnable{
             }
             case "/light":
             {
-                File parent = new File("src/main/resources/Brightness");
-                File file = new File(parent, "log.html");
+                File parent;
+                File file;
+                if(searchSensorData("src/main/resources/Brightness/log.html", dataRequested)){
+                    parent = new File("src/main/resources");
+                    file = new File(parent, "data.html");
+                } else {
+                    parent = new File("src/main/resources/Brightness");
+                    file = new File(parent, "log.html");
+                }
                 int fileLength = (int) file.length();
                 content = getContentType(fileRequested+".html");
 
@@ -260,4 +293,31 @@ public class JavaHTTPServer implements Runnable{
         dataOut.flush();
     }
 
+    private boolean searchSensorData(String path, String dataRequested) throws IOException{
+        FileReader fileReader = new FileReader(path);
+
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        List<String> lines = new ArrayList<>();
+        String line;
+
+        while ((line = bufferedReader.readLine()) != null)
+        {
+            lines.add(line);
+        }
+
+        bufferedReader.close();
+
+        for (String data: lines) {
+            if (data.contains("| ID : " + dataRequested)){
+                String str = "<body style=\"background: antiquewhite; font-size: 15pt; text-align: center\">"+data;
+                BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/data.html"));
+                writer.write(str);
+                writer.close();
+                System.out.println("Sensordata found");
+                return true;
+            }
+        }
+        System.out.println("Sensordata found");
+        return false;
+    }
 }
