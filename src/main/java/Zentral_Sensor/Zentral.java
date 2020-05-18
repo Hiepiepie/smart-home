@@ -125,7 +125,7 @@ public class Zentral implements Runnable{
         try(FileWriter fw = new FileWriter(PATH, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw)) {
-            out.println("<br><br><br><br><br>********************************************<br>"
+            out.println("<br>********************************************<br>"
                 + "<a href=\"http://localhost:8080/" + device + "/id=" + idClient + "\"> " + date + " </a><br>" + "<p style=\"color: orangered\">"+type + " " + info + " | ID : " + idClient +"</p>" );
 
         } catch (IOException e) {
@@ -152,8 +152,33 @@ public class Zentral implements Runnable{
         System.out.println(ANSI_RESET + "Server-> IP : " + iaClient + " | Port : " + port + " | " + typeClient + " Information : " + infoClient + " --- ID: " + idClient + "\n");
     }
 
+    public void clearLogFile() throws IOException {
+        separator = System.getProperty("file.separator");
+        String str = "<body style=\"background: antiquewhite; font-size: 15pt; text-align: center\">";
+
+        String PATH = "src" + separator + "main" + separator + "resources" + separator + "Brightness" + separator + "log.html";
+        BufferedWriter writer = new BufferedWriter(new FileWriter(PATH));
+        writer.write(str);
+        writer.close();
+
+        PATH = "src" + separator + "main" + separator + "resources" + separator + "Temperatur" + separator + "log.html";
+        writer = new BufferedWriter(new FileWriter(PATH));
+        writer.write(str);
+        writer.close();
+
+        PATH = "src" + separator + "main" + separator + "resources" + separator + "Humidity" + separator + "log.html";
+        writer = new BufferedWriter(new FileWriter(PATH));
+        writer.write(str);
+        writer.close();
+    }
+
     @Override
     public void run() {
+        try {
+            this.clearLogFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         while (true) {
             try {
                 this.receivePackage();

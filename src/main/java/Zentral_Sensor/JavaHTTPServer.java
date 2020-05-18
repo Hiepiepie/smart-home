@@ -26,6 +26,7 @@ public class JavaHTTPServer implements Runnable{
     // Client Connection via Socket Class
     private Socket clientSocket;
 
+
     public JavaHTTPServer(Socket c) {
         clientSocket = c;
     }
@@ -61,9 +62,9 @@ public class JavaHTTPServer implements Runnable{
 
         try {
             // we read characters from the client via input stream on the socket
-            in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            in = getRequestFrom(clientSocket);
             // we get character output stream to client (for headers)
-            out = new PrintWriter(clientSocket.getOutputStream());
+            out = getPrinterWriterOut(clientSocket);
             // get binary output stream to client (for requested data)
             dataOut = new BufferedOutputStream(clientSocket.getOutputStream());
 
@@ -281,7 +282,7 @@ public class JavaHTTPServer implements Runnable{
         }
     }
 
-    private void outHeader(PrintWriter out, OutputStream dataOut, int fileLength, String content, byte[] fileData) throws IOException {
+    protected void outHeader(PrintWriter out, OutputStream dataOut, int fileLength, String content, byte[] fileData) throws IOException {
         out.println("Server: Java HTTP Server : 1.1");
         out.println("Date: " + new Date());
         out.println("Content-type: " + content);
@@ -317,7 +318,26 @@ public class JavaHTTPServer implements Runnable{
                 return true;
             }
         }
-        System.out.println("Sensordata found");
+        System.out.println("Sensordata not found");
         return false;
+    }
+
+    //Methods for Test purpose
+    public Socket getClientSocket() {
+        return clientSocket;
+    }
+
+    protected BufferedReader getRequestFrom(Socket socket) throws IOException{
+        return new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    }
+
+    protected PrintWriter getPrinterWriterOut(Socket socket) throws IOException{
+        return new PrintWriter(socket.getOutputStream());
+    }
+
+    protected void sendResponse(Socket socket, String responseBody) throws IOException {
+        PrintWriter out = new PrintWriter(socket.getOutputStream());
+        out.print(responseBody);
+        out.flush();
     }
 }
