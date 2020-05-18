@@ -4,6 +4,7 @@ import java.io.*;
 import java.lang.invoke.SwitchPoint;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -70,6 +71,12 @@ public class JavaHTTPServer implements Runnable{
 
             // get first line of the request from the client
             String input = in.readLine();
+
+            //check valid HTTP Request
+            if(!checkValidRequest(in)){
+                throw new FileNotFoundException();
+            }
+
             // we parse the request with a string tokenizer
             StringTokenizer parse = new StringTokenizer(input);
             String method = parse.nextToken().toUpperCase(); // we get the HTTP method of the client
@@ -124,13 +131,9 @@ public class JavaHTTPServer implements Runnable{
     private String handleGetHead(PrintWriter out, BufferedOutputStream dataOut, String fileRequested, String method) throws IOException {
         String content;
         String dataRequested = "0";
-        System.out.println(fileRequested);
-        System.out.println(dataRequested);
         if(fileRequested.contains("/id")){
             dataRequested = fileRequested.substring(fileRequested.indexOf("=")+1, fileRequested.length());
             fileRequested = fileRequested.substring(0,fileRequested.indexOf("/id"));
-            System.out.println(fileRequested);
-            System.out.println(dataRequested);
         }
         switch(fileRequested) {
             case "/thermometer":
@@ -328,7 +331,7 @@ public class JavaHTTPServer implements Runnable{
     }
 
     protected BufferedReader getRequestFrom(Socket socket) throws IOException{
-        return new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        return new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
     }
 
     protected PrintWriter getPrinterWriterOut(Socket socket) throws IOException{
@@ -339,5 +342,17 @@ public class JavaHTTPServer implements Runnable{
         PrintWriter out = new PrintWriter(socket.getOutputStream());
         out.print(responseBody);
         out.flush();
+    }
+
+    private boolean checkValidRequest(BufferedReader in) throws IOException {
+        StringBuilder lines = new StringBuilder();
+        int line;
+        while ((line = in.read()) != -1)
+        {
+            lines.append((char)line);
+            System.out.print((char)line);
+            if (lines.toString().contains("\r\n\r\n")) return true;
+        }
+        return false;
     }
 }

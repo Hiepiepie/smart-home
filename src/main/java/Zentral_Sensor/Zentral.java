@@ -149,7 +149,7 @@ public class Zentral implements Runnable{
     }
 
         public void printInformation () {
-        System.out.println(ANSI_RESET + "Server-> IP : " + iaClient + " | Port : " + port + " | " + typeClient + " Information : " + infoClient + " --- ID: " + idClient + "\n");
+        System.out.println(ANSI_RESET + "Server-> IP : " + iaClient + " | Port : " + portClient + " | " + typeClient + " Information : " + infoClient + " --- ID: " + idClient + "\n");
     }
 
     public void clearLogFile() throws IOException {
