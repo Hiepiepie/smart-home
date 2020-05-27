@@ -1,4 +1,4 @@
-package Zentral_Sensor;
+package Zentral;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

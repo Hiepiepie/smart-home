@@ -1,12 +1,13 @@
-package Zentral_Sensor;
+package Zentral;
 
+import Sensoren.Hygrometer;
+import Sensoren.Light;
+import Sensoren.Thermometer;
 import org.junit.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
 
 import static org.junit.Assert.assertEquals;
 

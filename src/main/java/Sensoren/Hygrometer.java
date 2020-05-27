@@ -1,4 +1,4 @@
-package Zentral_Sensor;
+package Sensoren;
 
 public class Hygrometer extends UDPClient{
 

@@ -1,6 +1,4 @@
-package Zentral_Sensor;
-
-import java.net.URI;
+package Sensoren;
 
 public class Thermometer extends  UDPClient{
 

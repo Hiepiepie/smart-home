@@ -1,4 +1,4 @@
-package Zentral_Sensor;
+package Zentral;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,18 +6,10 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+
 import static org.junit.Assert.*;
-
-import static org.mockito.Mockito.*;
-import java.io.File;
-
 
 
 public class HTTPServerTest {
@@ -31,7 +23,7 @@ public class HTTPServerTest {
 
   @Before
   public void setUp() throws IOException {
-    pbhttpServer = new ProcessBuilder("java", "-cp", PATH , "Zentral_Sensor.JavaHTTPServer");
+    pbhttpServer = new ProcessBuilder("java", "-cp", PATH , "Zentral.JavaHTTPServer");
   }
 
   @After

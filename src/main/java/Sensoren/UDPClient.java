@@ -1,6 +1,4 @@
-package Zentral_Sensor;
-
-
+package Sensoren;
 
 
 import java.net.DatagramPacket;
