@@ -9,26 +9,39 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
+import org.apache.thrift.server.TServer;
+import org.apache.thrift.server.TServer.Args;
+import org.apache.thrift.server.TSimpleServer;
+import org.apache.thrift.server.TThreadPoolServer;
+import org.apache.thrift.transport.TSSLTransportFactory;
+import org.apache.thrift.transport.TServerSocket;
+import org.apache.thrift.transport.TServerTransport;
+import org.apache.thrift.transport.TSSLTransportFactory.TSSLTransportParameters;
+
+
 public class Zentral implements Runnable{
 
 
-        String separator = File.separator;
-        private InetAddress ia;
-        private final DatagramSocket ds;
-        protected DatagramPacket dp;
-        final int port = 1234;
-        private byte[] buf = new byte[1024];
-        private HashMap<Integer, Integer> checkBuffer;
-        protected String msg;
-        protected String[] msgArray;
-        protected String iaClient;
-        protected String typeClient;
-        protected int portClient;
-        protected int idClient;
-        protected String infoClient;
-        public static final String ANSI_RED = "\u001B[31m";
-        public static final String ANSI_RESET = "\u001B[0m";
-        File oFile;
+    String separator = File.separator;
+    private InetAddress ia;
+    private final DatagramSocket ds;
+    protected DatagramPacket dp;
+    final int port = 1234;
+    private byte[] buf = new byte[1024];
+    private HashMap<Integer, Integer> checkBuffer;
+    protected String msg;
+    protected String[] msgArray;
+    protected String iaClient;
+    protected String typeClient;
+    protected int portClient;
+    protected int idClient;
+    protected String infoClient;
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    File oFile;
+
+    public  static DataSenderHandler handler;
+    public  static DataSender.Processor processor;
 
 
     //--------------------------------------------------------------------- main
@@ -36,13 +49,20 @@ public class Zentral implements Runnable{
 
         int PORT = 8080;
         try {
+            handler = new DataSenderHandler();
+            processor = new DataSender.Processor(handler);
+
+            Runnable startThrift = new Runnable() {
+                public void run() {
+                    startThrift(processor);
+                }
+            };
+            new Thread(startThrift).start();
 
             ServerSocket serverConnect = new ServerSocket(PORT);
             System.out.println("Server started.\nListening for connections on port : " + PORT + " ...\n");
             Zentral zentral = new Zentral();
-            Thread myUDP = new Thread(zentral);
-            myUDP.start();
-
+            new Thread(zentral).start();
             // we listen until user halts server execution
             while (true) {
 
@@ -68,7 +88,7 @@ public class Zentral implements Runnable{
     }
 
 
-        public void receivePackage () throws IOException {
+    public void receivePackage () throws IOException {
         byte[] buf = new byte[1024];
         dp = new DatagramPacket(buf, buf.length);
         ds.receive(dp);
@@ -76,16 +96,16 @@ public class Zentral implements Runnable{
 
     }
 
-        public void extractPackage () throws IOException {
+    public void extractPackage () throws IOException {
         msgArray = msg.split(";");
         iaClient = String.valueOf(dp.getAddress());
         portClient = dp.getPort();
         idClient = Integer.parseInt(msgArray[0]);
         typeClient = msgArray[1];
         infoClient = msgArray[2];
-            Date today = new Date();
-            saveData(today,typeClient,infoClient,idClient);
-        }
+        Date today = new Date();
+        saveData(today,typeClient,infoClient,idClient);
+    }
 
     private void saveData(Date date,String type, String info, int idClient) throws IOException {
         separator = System.getProperty("file.separator");
@@ -142,13 +162,13 @@ public class Zentral implements Runnable{
         }
         if ((checkBuffer.get(portClient) + 1) != idClient) {
             System.out.println(ANSI_RED + "Packet loss detected from IP : " + iaClient + " | Port : " + portClient
-                    + " | Type : " + typeClient + "\n");
+                + " | Type : " + typeClient + "\n");
         }
         if (idClient == 999) checkBuffer.put(portClient, 0);
         else checkBuffer.put(portClient, idClient);
     }
 
-        public void printInformation () {
+    public void printInformation () {
         System.out.println(ANSI_RESET + "Server-> IP : " + iaClient + " | Port : " + portClient + " | " + typeClient + " Information : " + infoClient + " --- ID: " + idClient + "\n");
     }
 
@@ -172,6 +192,21 @@ public class Zentral implements Runnable{
         writer.close();
     }
 
+    //Thrift Methods
+    public static void startThrift(DataSender.Processor processor) {
+        try {
+            TServerTransport serverTransport = new TServerSocket(9090);
+            TServer server = new TSimpleServer(new Args(serverTransport).processor(processor));
+
+            // Use this for a multithreaded server
+            // TServer server = new TThreadPoolServer(new TThreadPoolServer.Args(serverTransport).processor(processor));
+
+            System.out.println("Starting the simple server...");
+            server.serve();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     @Override
     public void run() {
         try {

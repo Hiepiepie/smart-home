@@ -9,6 +9,7 @@
         <module name="Smart-Home" />
         <module name="smart-home" />
         <module name="vs-praktikum-ss20-fehr-mo4x-adithanakevin-letrunghieu" />
+        <module name="VSPraktikum" />
       </profile>
     </annotationProcessing>
   </component>

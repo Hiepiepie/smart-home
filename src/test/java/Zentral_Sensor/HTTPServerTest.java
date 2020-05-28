@@ -39,35 +39,35 @@ public class HTTPServerTest {
 
   }
 
-  @Test
-  public void serverAcceptConnectionTest() throws IOException, InterruptedException {
-    // starts the `serverSocket`
-    Process process = pbhttpServer.inheritIO().start();
-
-
-    // create a `clientSocket` that will try to connect to a serverSocket
-    // that has the hostname 'localhost'
-    // and listens at port number 8080
-    Thread.sleep(1000);
-    try(Socket ableToConnect = new Socket(InetAddress.getLocalHost(), 8080)) {
-      assertTrue("Accepts connection when server in listening",
-          ableToConnect.isConnected());
-      // close the `clientSocket`
-    } catch (Exception e) {
-      System.out.println(e.getMessage());
-    }
-    Thread.sleep(1000);
-    //close the socket
-    process.destroy();
-    try {
-      // now that `serverSocket` is closed
-      // try to connect another `clientSocket` to the same `serverSocket`
-      new Socket(InetAddress.getLocalHost(), 8080);
-    } catch (Exception e) {
-      // assert that the exception is thrown and is the right exception
-      assertEquals("Connection refused", e.getMessage().trim());
-    }
-  }
+//  @Test
+//  public void serverAcceptConnectionTest() throws IOException, InterruptedException {
+//    // starts the `serverSocket`
+//    Process process = pbhttpServer.inheritIO().start();
+//
+//
+//    // create a `clientSocket` that will try to connect to a serverSocket
+//    // that has the hostname 'localhost'
+//    // and listens at port number 8080
+//    Thread.sleep(1000);
+//    try(Socket ableToConnect = new Socket(InetAddress.getLocalHost(), 8080)) {
+//      assertTrue("Accepts connection when server in listening",
+//          ableToConnect.isConnected());
+//      // close the `clientSocket`
+//    } catch (Exception e) {
+//      System.out.println(e.getMessage());
+//    }
+//    Thread.sleep(1000);
+//    //close the socket
+//    process.destroy();
+//    try {
+//      // now that `serverSocket` is closed
+//      // try to connect another `clientSocket` to the same `serverSocket`
+//      new Socket(InetAddress.getLocalHost(), 8080);
+//    } catch (Exception e) {
+//      // assert that the exception is thrown and is the right exception
+//      assertEquals("Connection refused", e.getMessage().trim());
+   //  }
+  //}
 
   @Test
   public void serverAcceptRequestTest() throws IOException {
