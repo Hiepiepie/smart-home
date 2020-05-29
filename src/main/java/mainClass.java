@@ -11,20 +11,20 @@ public class mainClass {
         ProcessBuilder pbHygrometer = new ProcessBuilder("java", "-cp", PATH , "Zentral_Sensor.Hygrometer");
         ProcessBuilder pbLight = new ProcessBuilder("java", "-cp", PATH , "Zentral_Sensor.Light");
         ProcessBuilder pbThermometer = new ProcessBuilder("java", "-cp", PATH , "Zentral_Sensor.Thermometer");
-        ProcessBuilder pbCentralServer = new ProcessBuilder("java", "-cp", PATH , "Zentral_Sensor.Zentral");
-        ProcessBuilder pbProviderServer = new ProcessBuilder("java", "-cp", PATH, "ProviderServer.ProviderServer");
+        //ProcessBuilder pbCentralServer = new ProcessBuilder("java", "-cp", PATH , "Zentral_Sensor.Zentral");
+        //ProcessBuilder pbProviderServer = new ProcessBuilder("java", "-cp", PATH, "ProviderServer.ProviderServer");
 
-        //Process pHygrometer = pbHygrometer.inheritIO().start();
-        //Process pLight = pbLight.inheritIO().start();
-        //Process pThermometer = pbThermometer.inheritIO().start();
-        Process pCentralServer = pbCentralServer.inheritIO().start();
-        Process pProviderServer = pbProviderServer.inheritIO().start();
+        Process pHygrometer = pbHygrometer.inheritIO().start();
+        Process pLight = pbLight.inheritIO().start();
+        Process pThermometer = pbThermometer.inheritIO().start();
+        //Process pCentralServer = pbCentralServer.inheritIO().start();
+        //Process pProviderServer = pbProviderServer.inheritIO().start();
 
-        pCentralServer.waitFor();
-        //pHygrometer.waitFor();
-        //pLight.waitFor();
-        //pThermometer.waitFor();
-        pProviderServer.waitFor();
+        pHygrometer.waitFor();
+        pLight.waitFor();
+        pThermometer.waitFor();
+        //pCentralServer.waitFor();
+        //pProviderServer.waitFor();
     }
 }
 

@@ -40,8 +40,8 @@ public class Zentral implements Runnable{
     public static final String ANSI_RESET = "\u001B[0m";
     File oFile;
 
-    public  static DataSenderHandler handler;
-    public  static DataSender.Processor processor;
+    public static DataSenderHandler handler;
+    public static DataSender.Processor processor;
 
 
     //--------------------------------------------------------------------- main
@@ -201,7 +201,7 @@ public class Zentral implements Runnable{
             // Use this for a multithreaded server
             // TServer server = new TThreadPoolServer(new TThreadPoolServer.Args(serverTransport).processor(processor));
 
-            System.out.println("Starting the simple server...");
+            System.out.println("Starting the Thrift Service on port 9090...");
             server.serve();
         } catch (Exception e) {
             e.printStackTrace();
@@ -218,6 +218,7 @@ public class Zentral implements Runnable{
             try {
                 this.receivePackage();
                 this.extractPackage();
+                handler.setCurrentData(msg, typeClient);
                 this.packetCheck();
                 this.printInformation();
             } catch (IOException e) {
