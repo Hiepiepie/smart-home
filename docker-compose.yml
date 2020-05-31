@@ -1,0 +1,41 @@
+version: "3.6"
+
+services:
+
+#Sensoren
+    sensoren:
+        container_name: "Sensoren"
+        build:
+            context: ""
+            dockerfile: src/main/java/Sensoren/Dockerfile
+        image: verteilte_systeme/sensoren
+
+        environment:
+            SENSOR_NAME: "AlleSensoren"
+            SENSOR_TYPE: "AlleSensoren"
+            ZENTRALE_IP: "172.20.0.2"
+            ZENTRALE_PORT: "1234"
+
+# Zentrale
+    zentrale:
+        container_name: "zentrale"
+        build:
+            context: ""
+            dockerfile: src/main/java/Zentral/Dockerfile
+        image: verteilte_systeme/zentrale
+
+        ports:
+            - "8080:8080"
+    
+
+
+# Anbieter
+    provider:
+        container_name: "provider"
+        build:
+            context: ""
+            dockerfile: src/main/java/ProviderServer/Dockerfile
+        image: verteilte_systeme/provider
+
+
+
