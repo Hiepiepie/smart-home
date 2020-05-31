@@ -8,6 +8,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
+import Zentral_Sensor.DataSender;
+import Zentral_Sensor.DataSenderHandler;
+import Zentral.JavaHTTPServer;
 import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.TServer.Args;
 import org.apache.thrift.server.TSimpleServer;

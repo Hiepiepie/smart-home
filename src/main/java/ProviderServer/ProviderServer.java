@@ -44,10 +44,8 @@ public class ProviderServer {
       } finally {
         transport.close();
       }
-    } catch (TTransportException e) {
+    } catch (TException e) {
       e.printStackTrace();
-    } catch (TException x) {
-      x.printStackTrace();
     }
   }
 

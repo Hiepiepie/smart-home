@@ -1,4 +1,4 @@
-package Zentral_Sensor;
+package Zentral;
 
 import java.io.*;
 import java.lang.invoke.SwitchPoint;
@@ -329,7 +329,7 @@ public class JavaHTTPServer implements Runnable{
         return clientSocket;
     }
 
-    protected BufferedReader getRequestFrom(Socket socket) throws IOException{
+    public BufferedReader getRequestFrom(Socket socket) throws IOException{
         return new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
     }
 
@@ -337,7 +337,7 @@ public class JavaHTTPServer implements Runnable{
         return new PrintWriter(socket.getOutputStream());
     }
 
-    protected void sendResponse(Socket socket, String responseBody) throws IOException {
+    public void sendResponse(Socket socket, String responseBody) throws IOException {
         PrintWriter out = new PrintWriter(socket.getOutputStream());
         out.print(responseBody);
         out.flush();

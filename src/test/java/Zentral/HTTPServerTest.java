@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+
+import Zentral.JavaHTTPServer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
