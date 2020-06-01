@@ -4,9 +4,9 @@ import org.apache.thrift.TException;
 
 public class DataSenderHandler implements DataSender.Iface {
 
-  String HygrosensorData;
-  String ThermosensorData;
-  String LightensorData;
+  String HygrosensorData = "no data";
+  String ThermosensorData = "no data";
+  String LightensorData = "no data";
 
   @Override
   public void ping() throws TException {

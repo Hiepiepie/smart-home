@@ -42,6 +42,9 @@ public class Zentral implements Runnable{
     public static final String ANSI_RESET = "\u001B[0m";
     File oFile;
 
+    //private final String RESOURCES_FOLDER = "src" + separator + "main" + separator + "resources" + separator + "CentralDatas";
+    private final String RESOURCES_FOLDER = "classes" + separator + "CentralDatas";
+
     public static DataSenderHandler handler;
     public static DataSender.Processor processor;
 
@@ -105,21 +108,20 @@ public class Zentral implements Runnable{
         idClient = Integer.parseInt(msgArray[0]);
         typeClient = msgArray[1];
         infoClient = msgArray[2];
-        Date today = new Date();
-        saveData(today,typeClient,infoClient,idClient);
     }
 
-    private void saveData(Date date,String type, String info, int idClient) throws IOException {
+    private void saveData() throws IOException {
         separator = System.getProperty("file.separator");
-        String PATH = "src" + separator + "main" + separator + "resources" + separator + typeClient+ separator + "log.html";
+        String PATH = RESOURCES_FOLDER + separator + typeClient+ separator + "log.html";
         Path path = Paths.get(PATH);
+        Date date = new Date();
         try {
             if (Files.notExists(path)) {
                 oFile = new File(PATH);
                 oFile.createNewFile();
-                appendToFile(date, type, info, idClient, PATH);
+                appendToFile(date, typeClient, infoClient, idClient, PATH);
             } else {
-                appendToFile(date, type, info, idClient, PATH);
+                appendToFile(date, typeClient, infoClient, idClient, PATH);
             }
         } catch ( Exception e){
             e.printStackTrace();
@@ -178,17 +180,17 @@ public class Zentral implements Runnable{
         separator = System.getProperty("file.separator");
         String str = "<body style=\"background: antiquewhite; font-size: 15pt; text-align: center\">";
 
-        String PATH = "src" + separator + "main" + separator + "resources" + separator + "Brightness" + separator + "log.html";
+        String PATH = RESOURCES_FOLDER + separator + "Brightness" + separator + "log.html";
         BufferedWriter writer = new BufferedWriter(new FileWriter(PATH));
         writer.write(str);
         writer.close();
 
-        PATH = "src" + separator + "main" + separator + "resources" + separator + "Temperatur" + separator + "log.html";
+        PATH = RESOURCES_FOLDER + separator + "Temperatur" + separator + "log.html";
         writer = new BufferedWriter(new FileWriter(PATH));
         writer.write(str);
         writer.close();
 
-        PATH = "src" + separator + "main" + separator + "resources" + separator + "Humidity" + separator + "log.html";
+        PATH = RESOURCES_FOLDER + separator + "Humidity" + separator + "log.html";
         writer = new BufferedWriter(new FileWriter(PATH));
         writer.write(str);
         writer.close();
@@ -220,6 +222,7 @@ public class Zentral implements Runnable{
             try {
                 this.receivePackage();
                 this.extractPackage();
+                this.saveData();
                 handler.setCurrentData(msg, typeClient);
                 this.packetCheck();
                 this.printInformation();

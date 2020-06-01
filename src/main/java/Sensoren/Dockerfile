@@ -4,8 +4,7 @@ COPY pom.xml /tmp/
 COPY src /tmp/src/
 WORKDIR /tmp/
 
-
-RUN mvn compile
+RUN mvn install
 
 #Finaler Container
 FROM openjdk:11-jdk

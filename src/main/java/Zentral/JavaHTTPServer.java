@@ -14,10 +14,18 @@ import java.util.StringTokenizer;
 // Each Client Connection will be managed in a dedicated Thread
 public class JavaHTTPServer implements Runnable{
 
+    static String separator = File.separator;
     static final File WEB_ROOT = new File(".");
     static final String DEFAULT_FILE = "index.html";
     static final String FILE_NOT_FOUND = "404.html";
     static final String METHOD_NOT_SUPPORTED = "not_supported.html";
+
+    //static final String RESOURCE_FOLDER = "src" + separator + "main" + separator + "resources" + separator + "CentralDatas";
+    //static final String HTML_FOLDER = "src" + separator + "main" + separator + "resources" + separator + "HTMLPage" + separator;
+
+    static final String RESOURCE_FOLDER = "classes" + separator + "CentralDatas";
+    static final String HTML_FOLDER = "classes" + separator + "HTMLPage";
+
     // port to listen connection
     static final int PORT = 8080;
 
@@ -131,20 +139,23 @@ public class JavaHTTPServer implements Runnable{
     private String handleGetHead(PrintWriter out, BufferedOutputStream dataOut, String fileRequested, String method) throws IOException {
         String content;
         String dataRequested = "0";
+        System.out.println(fileRequested);
         if(fileRequested.contains("/id")){
-            dataRequested = fileRequested.substring(fileRequested.indexOf("=")+1, fileRequested.length());
+            dataRequested = fileRequested.substring(fileRequested.indexOf("=")+1);
             fileRequested = fileRequested.substring(0,fileRequested.indexOf("/id"));
         }
+        System.out.println(dataRequested);
         switch(fileRequested) {
             case "/thermometer":
             {
                 File parent;
                 File file;
-                if(searchSensorData("src/main/resources/Temperatur/log.html", dataRequested)){
-                    parent = new File("src/main/resources");
+                if(searchSensorData(RESOURCE_FOLDER + separator + "Temperatur/log.html", dataRequested)){
+                    System.out.println("hey");
+                    parent = new File(HTML_FOLDER);
                     file = new File(parent, "data.html");
                 } else {
-                    parent = new File("src/main/resources/Temperatur");
+                    parent = new File(RESOURCE_FOLDER + separator + "Temperatur");
                     file = new File(parent, "log.html");
                 }
                 int fileLength = (int) file.length();
@@ -162,12 +173,12 @@ public class JavaHTTPServer implements Runnable{
             {
                 File parent;
                 File file;
-                if(searchSensorData("src/main/resources/Humidity/log.html", dataRequested)){
-                    parent = new File("src/main/resources");
+                if(searchSensorData(RESOURCE_FOLDER + separator + "Humidity/log.html", dataRequested)){
+                    parent = new File(HTML_FOLDER);
                     file = new File(parent, "data.html");
 
                 } else{
-                    parent = new File("src/main/resources/Humidity");
+                    parent = new File(RESOURCE_FOLDER + separator + "Humidity");
                     file = new File(parent, "log.html");
                 }
                 int fileLength = (int) file.length();
@@ -185,11 +196,11 @@ public class JavaHTTPServer implements Runnable{
             {
                 File parent;
                 File file;
-                if(searchSensorData("src/main/resources/Brightness/log.html", dataRequested)){
-                    parent = new File("src/main/resources");
+                if(searchSensorData(RESOURCE_FOLDER + separator + "Brightness/log.html", dataRequested)){
+                    parent = new File(HTML_FOLDER);
                     file = new File(parent, "data.html");
                 } else {
-                    parent = new File("src/main/resources/Brightness");
+                    parent = new File(RESOURCE_FOLDER + separator + "Brightness");
                     file = new File(parent, "log.html");
                 }
                 int fileLength = (int) file.length();
@@ -204,7 +215,7 @@ public class JavaHTTPServer implements Runnable{
                 break;
             }
             default:{
-                File file = new File(WEB_ROOT, fileRequested);
+                File file = new File(WEB_ROOT, HTML_FOLDER + fileRequested);
                 int fileLength = (int) file.length();
                 content = getContentType(fileRequested);
 
@@ -237,7 +248,7 @@ public class JavaHTTPServer implements Runnable{
         }
 
         // we return the not supported file to the client
-        File file = new File(WEB_ROOT, METHOD_NOT_SUPPORTED);
+        File file = new File(WEB_ROOT, HTML_FOLDER + METHOD_NOT_SUPPORTED);
         int fileLength = (int) file.length();
         String contentMimeType = "text/html";
         //read content to return to client
@@ -272,7 +283,7 @@ public class JavaHTTPServer implements Runnable{
     }
 
     private void fileNotFound(PrintWriter out, OutputStream dataOut, String fileRequested) throws IOException {
-        File file = new File(WEB_ROOT, FILE_NOT_FOUND);
+        File file = new File(WEB_ROOT, HTML_FOLDER + FILE_NOT_FOUND);
         int fileLength = (int) file.length();
         String content = "text/html";
         byte[] fileData = readFileData(file, fileLength);
@@ -299,22 +310,22 @@ public class JavaHTTPServer implements Runnable{
 
     private boolean searchSensorData(String path, String dataRequested) throws IOException{
         FileReader fileReader = new FileReader(path);
-
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         List<String> lines = new ArrayList<>();
         String line;
-
+        System.out.println("TESTTTT");
         while ((line = bufferedReader.readLine()) != null)
         {
             lines.add(line);
         }
-
+        System.out.println("TESTTTT");
         bufferedReader.close();
 
         for (String data: lines) {
+            System.out.println("TESTTTT");
             if (data.contains("| ID : " + dataRequested)){
                 String str = "<body style=\"background: antiquewhite; font-size: 15pt; text-align: center\">"+data;
-                BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/data.html"));
+                BufferedWriter writer = new BufferedWriter(new FileWriter(HTML_FOLDER + separator + "data.html"));
                 writer.write(str);
                 writer.close();
                 System.out.println("Sensordata found");
@@ -349,7 +360,7 @@ public class JavaHTTPServer implements Runnable{
         while ((line = in.read()) != -1)
         {
             lines.append((char)line);
-            System.out.print((char)line);
+            //System.out.print((char)line);
             if (lines.toString().contains("\r\n\r\n")) return true;
         }
         return false;
