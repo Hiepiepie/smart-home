@@ -67,8 +67,27 @@ services:
            verteilte_systeme:
                ipv4_address: "172.20.0.3"
 
+   portainer:
+           container_name: "portainer"
+           image: portainer/portainer
+           volumes:
+               - /var/run/docker.sock:/var/run/docker.sock
+               - portainer_data:/data
 
-    #Netzwerk
+           ports:
+               - "81:9000"
+
+           networks:
+               verteilte_systeme:
+                   ipv4_address: "172.20.0.10"
+
+
+
+
+    #Volumes
+volumes:
+    portainer_data:
+       #Netzwerk
 networks:
     verteilte_systeme:
         ipam:

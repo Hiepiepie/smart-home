@@ -33,64 +33,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="reconstruct">
+    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="add configure network">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Hygrometer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Hygrometer/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Light/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Light/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Thermometer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Thermometer/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Brightness/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Brightness/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Humidity/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Humidity/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Temperatur/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Temperatur/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ProviderServer/ProviderServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProviderServer/ProviderServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sensoren/mainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sensoren/mainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral/JavaHTTPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Zentral/JavaHTTPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral/Zentral$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Zentral/Zentral$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral/Zentral.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Zentral/Zentral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncClient$Factory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncClient$getSensorData_call.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncClient$ping_call.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncIface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncProcessor$getSensorData$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncProcessor$getSensorData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncProcessor$ping$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncProcessor$ping.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$AsyncProcessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$Client$Factory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$Iface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$Processor$getSensorData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$Processor$ping.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$Processor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_args$_Fields.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_args$getSensorData_argsStandardScheme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_args$getSensorData_argsStandardSchemeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_args$getSensorData_argsTupleScheme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_args$getSensorData_argsTupleSchemeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_args.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_result$_Fields.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_result$getSensorData_resultStandardScheme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_result$getSensorData_resultStandardSchemeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_result$getSensorData_resultTupleScheme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_result$getSensorData_resultTupleSchemeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$getSensorData_result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_args$_Fields.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_args$ping_argsStandardScheme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_args$ping_argsStandardSchemeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_args$ping_argsTupleScheme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_args$ping_argsTupleSchemeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_args.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_result$_Fields.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_result$ping_resultStandardScheme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_result$ping_resultStandardSchemeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_result$ping_resultTupleScheme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_result$ping_resultTupleSchemeFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender$ping_result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral_Sensor/DataSenderHandler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +227,7 @@
       <workItem from="1591040880210" duration="68000" />
       <workItem from="1591040949576" duration="2153000" />
       <workItem from="1591043374235" duration="6854000" />
-      <workItem from="1591070948602" duration="3287000" />
+      <workItem from="1591070948602" duration="4008000" />
     </task>
     <task id="LOCAL-00001" summary="reconstruct">
       <created>1589275234692</created>
@@ -414,7 +362,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591070629142</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add configure network">
+      <created>1591074381296</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1591074381296</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add configure network">
+      <created>1591074387212</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1591074387212</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +416,8 @@
     <MESSAGE value="minor changes" />
     <MESSAGE value="first Draft" />
     <MESSAGE value="reconstruct" />
-    <option name="LAST_COMMIT_MESSAGE" value="reconstruct" />
+    <MESSAGE value="add configure network" />
+    <option name="LAST_COMMIT_MESSAGE" value="add configure network" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1071" y="173" key="#Dockerfile" timestamp="1589490324656">
@@ -542,10 +505,10 @@
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="466" y="150" key="SettingsEditor/0.0.1970.1152@0.0.1970.1152" timestamp="1589384635810" />
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591070631960">
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591074389738">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591070631960" />
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591074389738" />
     <state x="578" y="309" key="Vcs.Push.Dialog.v2/0.0.1970.1152@0.0.1970.1152" timestamp="1589275245392" />
     <state x="732" y="310" key="VcsDiffUtil.ChangesDialog" timestamp="1590643801804">
       <screen x="0" y="0" width="1962" height="1152" />
