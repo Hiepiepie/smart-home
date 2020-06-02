@@ -7,6 +7,12 @@ services:
            context: ""
            dockerfile: src/main/java/Sensoren/Thermometer/Dockerfile
        image: verteilte_systeme/thermometer
+       environment:
+           SENSOR_NAME: "Thermometer"
+           SENSOR_TYPE: "Thermometer"
+           ZENTRALE_IP: "172.20.0.2"
+           ZENTRALE_PORT: "1234"
+
        networks:
            verteilte_systeme:
                ipv4_address: "172.20.0.11"
@@ -19,6 +25,12 @@ services:
            context: ""
            dockerfile: src/main/java/Sensoren/Hygrometer/Dockerfile
        image: verteilte_systeme/hygrometer
+       environment:
+           SENSOR_NAME: "Hygrometer"
+           SENSOR_TYPE: "Hygrometer"
+           ZENTRALE_IP: "172.20.0.2"
+           ZENTRALE_PORT: "1234"
+
        networks:
            verteilte_systeme:
                ipv4_address: "172.20.0.12"
@@ -32,6 +44,12 @@ services:
            context: ""
            dockerfile: src/main/java/Sensoren/Light/Dockerfile
        image: verteilte_systeme/light
+       environment:
+           SENSOR_NAME: "Light"
+           SENSOR_TYPE: "Light"
+           ZENTRALE_IP: "172.20.0.2"
+           ZENTRALE_PORT: "1234"
+
        networks:
            verteilte_systeme:
                ipv4_address: "172.20.0.13"

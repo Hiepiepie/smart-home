@@ -33,12 +33,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="add configure network">
+    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="add portainer manager">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Brightness/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Brightness/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Humidity/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Humidity/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Temperatur/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Temperatur/log.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +224,7 @@
       <workItem from="1591040880210" duration="68000" />
       <workItem from="1591040949576" duration="2153000" />
       <workItem from="1591043374235" duration="6854000" />
-      <workItem from="1591070948602" duration="4008000" />
+      <workItem from="1591070948602" duration="4119000" />
     </task>
     <task id="LOCAL-00001" summary="reconstruct">
       <created>1589275234692</created>
@@ -376,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591074387212</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add portainer manager">
+      <created>1591075106208</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1591075106208</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +421,8 @@
     <MESSAGE value="first Draft" />
     <MESSAGE value="reconstruct" />
     <MESSAGE value="add configure network" />
-    <option name="LAST_COMMIT_MESSAGE" value="add configure network" />
+    <MESSAGE value="add portainer manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="add portainer manager" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1071" y="173" key="#Dockerfile" timestamp="1589490324656">
@@ -505,10 +510,10 @@
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="466" y="150" key="SettingsEditor/0.0.1970.1152@0.0.1970.1152" timestamp="1589384635810" />
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591074389738">
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591075110578">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591074389738" />
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591075110578" />
     <state x="578" y="309" key="Vcs.Push.Dialog.v2/0.0.1970.1152@0.0.1970.1152" timestamp="1589275245392" />
     <state x="732" y="310" key="VcsDiffUtil.ChangesDialog" timestamp="1590643801804">
       <screen x="0" y="0" width="1962" height="1152" />
