@@ -248,7 +248,7 @@ public class JavaHTTPServer implements Runnable{
         }
 
         // we return the not supported file to the client
-        File file = new File(WEB_ROOT, HTML_FOLDER + METHOD_NOT_SUPPORTED);
+        File file = new File(WEB_ROOT, HTML_FOLDER + separator+ METHOD_NOT_SUPPORTED);
         int fileLength = (int) file.length();
         String contentMimeType = "text/html";
         //read content to return to client
@@ -283,7 +283,7 @@ public class JavaHTTPServer implements Runnable{
     }
 
     private void fileNotFound(PrintWriter out, OutputStream dataOut, String fileRequested) throws IOException {
-        File file = new File(WEB_ROOT, HTML_FOLDER + FILE_NOT_FOUND);
+        File file = new File(WEB_ROOT, HTML_FOLDER + separator + FILE_NOT_FOUND);
         int fileLength = (int) file.length();
         String content = "text/html";
         byte[] fileData = readFileData(file, fileLength);

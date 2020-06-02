@@ -1,6 +1,8 @@
-package Sensoren;
+package Sensoren.Light;
 
-public class Light extends UDPClient{
+import Sensoren.UDPClient;
+
+public class Light extends UDPClient {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Light started");

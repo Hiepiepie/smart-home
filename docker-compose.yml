@@ -2,21 +2,30 @@ version: "3.6"
 
 services:
 
-#Sensoren
-    sensoren:
-        container_name: "Sensoren"
+#Thermometer
+    thermometer:
+        container_name: "thermometer"
         build:
             context: ""
-            dockerfile: src/main/java/Sensoren/Dockerfile
-        image: verteilte_systeme/sensoren
+            dockerfile: src/main/java/Sensoren/Thermometer/Dockerfile
+        image: verteilte_systeme/thermometer
 
-        environment:
-            SENSOR_NAME: "AlleSensoren"
-            SENSOR_TYPE: "AlleSensoren"
-            ZENTRALE_IP: "172.20.0.2"
-            ZENTRALE_PORT: "1234"
+    #Hygrometer
+    hygrometer:
+        container_name: "hygrometer"
+        build:
+            context: ""
+            dockerfile: src/main/java/Sensoren/Hygrometer/Dockerfile
+        image: verteilte_systeme/hygrometer
 
-# Zentrale
+    #Light
+    light:
+        container_name: "light"
+        build:
+            context: ""
+            dockerfile: src/main/java/Sensoren/Light/Dockerfile
+        image: verteilte_systeme/light
+    # Zentrale
     zentrale:
         container_name: "zentrale"
         build:
@@ -26,16 +35,22 @@ services:
 
         ports:
             - "8080:8080"
-    
+            - "1234:1234"
 
+   # Anbieter
+   provider:
+       container_name: "provider"
+       build:
+           context: ""
+           dockerfile: src/main/java/ProviderServer/Dockerfile
+       image: verteilte_systeme/provider
+       ports:
+           - "9090:9090"
 
-# Anbieter
-    provider:
-        container_name: "provider"
-        build:
-            context: ""
-            dockerfile: src/main/java/ProviderServer/Dockerfile
-        image: verteilte_systeme/provider
-
-
+#    mainclass:
+#        container_name: "sensoren"
+#        build:
+#            context: ""
+#            dockerfile: src/main/java/Sensoren/Dockerfile
+#        image: verteilte_systeme/sensoren
 

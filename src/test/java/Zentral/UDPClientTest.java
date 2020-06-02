@@ -1,8 +1,8 @@
 package Zentral;
 
-import Sensoren.Hygrometer;
-import Sensoren.Light;
-import Sensoren.Thermometer;
+import Sensoren.Hygrometer.Hygrometer;
+import Sensoren.Light.Light;
+import Sensoren.Thermometer.Thermometer;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

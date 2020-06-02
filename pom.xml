@@ -53,7 +53,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>Sensoren.Thermometer</mainClass>
+                                    <mainClass>Sensoren.Thermometer.Thermometer</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
@@ -71,7 +71,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>Sensoren.Light</mainClass>
+                                    <mainClass>Sensoren.Light.Light</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
@@ -89,13 +89,31 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>Sensoren.Hygrometer</mainClass>
+                                    <mainClass>Sensoren.Hygrometer.Hygrometer</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
                             </descriptorRefs>
                             <finalName>Hygrometer</finalName>
+                        </configuration>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>build-mainClass-sensor</id>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <mainClass>Sensoren.mainClass</mainClass>
+                                </manifest>
+                            </archive>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <finalName>mainClass</finalName>
                         </configuration>
                         <phase>package</phase>
                         <goals>

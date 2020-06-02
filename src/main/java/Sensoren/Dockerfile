@@ -4,13 +4,12 @@ COPY pom.xml /tmp/
 COPY src /tmp/src/
 WORKDIR /tmp/
 
-RUN mvn install
+RUN mvn package
 
 #Finaler Container
-FROM openjdk:11-jdk
-
-
+FROM openjdk:11
+EXPOSE 1234
 COPY --from=BUILD /tmp/target /app/target
-WORKDIR /app
-EXPOSE 8080
-ENTRYPOINT ["java","-cp","/app/target/classes","Sensoren.mainClass"]
+WORKDIR /app/target
+
+ENTRYPOINT ["java","-jar","/app/target/mainClass-jar-with-dependencies.jar"]

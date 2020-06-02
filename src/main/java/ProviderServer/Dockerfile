@@ -5,10 +5,12 @@ COPY src /tmp/src/
 WORKDIR /tmp/
 
 
-RUN mvn compile
+RUN mvn package
 
 #Finaler Container
-FROM openjdk:11-jdk
+FROM openjdk:11
+EXPOSE 9090
 COPY --from=BUILD /tmp/target /app/target
-WORKDIR /app
-ENTRYPOINT ["java","-cp","/app/target/classes","ProviderServer.ProviderServer"]
+WORKDIR /app/target
+
+ENTRYPOINT ["java","-jar","/app/target/ProviderServer-jar-with-dependencies.jar"]

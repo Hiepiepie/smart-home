@@ -1,6 +1,8 @@
-package Sensoren;
+package Sensoren.Hygrometer;
 
-public class Hygrometer extends UDPClient{
+import Sensoren.UDPClient;
+
+public class Hygrometer extends UDPClient {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Hygrometer started");

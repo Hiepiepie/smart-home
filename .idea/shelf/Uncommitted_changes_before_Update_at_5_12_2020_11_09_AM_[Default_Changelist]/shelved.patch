@@ -1,0 +1,44 @@
+Index: smart-home.iml
+===================================================================
+--- smart-home.iml	(revision e94050e75f37372e3d55b7444ec11566df140eef)
++++ smart-home.iml	(revision e94050e75f37372e3d55b7444ec11566df140eef)
+@@ -1,2 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4" />
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenBuildProjectComponent\">\r\n    <option name=\"mavenExecutable\" value=\"\" />\r\n    <option name=\"Settings File\" value=\"\" />\r\n    <option name=\"mavenCommandLineParams\" value=\"\" />\r\n    <option name=\"vmOptions\" value=\"\" />\r\n    <option name=\"useMavenEmbedder\" value=\"false\" />\r\n    <option name=\"useFilter\" value=\"false\" />\r\n    <option name=\"Batch Mode\" value=\"false\" />\r\n    <option name=\"Check Plugin Updates\" value=\"false\" />\r\n    <option name=\"Debug\" value=\"false\" />\r\n    <option name=\"Errors\" value=\"false\" />\r\n    <option name=\"Fail At End\" value=\"false\" />\r\n    <option name=\"Fail Fast\" value=\"false\" />\r\n    <option name=\"Fail Never\" value=\"false\" />\r\n    <option name=\"Lax Checksums\" value=\"false\" />\r\n    <option name=\"No Plugin Registry\" value=\"false\" />\r\n    <option name=\"No Plugin Updates\" value=\"false\" />\r\n    <option name=\"Non Recursive\" value=\"false\" />\r\n    <option name=\"Offline\" value=\"false\" />\r\n    <option name=\"Reactor\" value=\"false\" />\r\n    <option name=\"Strict Checksums\" value=\"false\" />\r\n    <option name=\"Update Plugins\" value=\"false\" />\r\n    <option name=\"Update Snapshots\" value=\"false\" />\r\n    <option name=\"Skip Tests\" value=\"false\" />\r\n    <pom-list />\r\n  </component>\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" default=\"false\" project-jdk-name=\"11\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision e94050e75f37372e3d55b7444ec11566df140eef)
++++ .idea/misc.xml	(date 1589274535189)
+@@ -1,6 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="JavaScriptSettings">
++    <option name="languageLevel" value="ES6" />
++  </component>
+   <component name="MavenBuildProjectComponent">
+     <option name="mavenExecutable" value="" />
+     <option name="Settings File" value="" />
+@@ -27,14 +30,7 @@
+     <option name="Skip Tests" value="false" />
+     <pom-list />
+   </component>
+-  <component name="MavenProjectsManager">
+-    <option name="originalFiles">
+-      <list>
+-        <option value="$PROJECT_DIR$/pom.xml" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file

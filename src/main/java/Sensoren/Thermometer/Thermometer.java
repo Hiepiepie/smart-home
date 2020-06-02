@@ -1,6 +1,8 @@
-package Sensoren;
+package Sensoren.Thermometer;
 
-public class Thermometer extends  UDPClient{
+import Sensoren.UDPClient;
+
+public class Thermometer extends UDPClient {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Thermometer started");
