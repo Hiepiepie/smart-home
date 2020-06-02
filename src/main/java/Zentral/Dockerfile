@@ -1,0 +1,16 @@
+FROM maven:3.6.3-jdk-8 AS BUILD
+#Kopiere alle Dateien
+COPY pom.xml /tmp/
+COPY src /tmp/src/
+WORKDIR /tmp/
+
+
+RUN mvn package
+
+FROM openjdk:11
+EXPOSE 1234/udp
+EXPOSE 8080/tcp
+COPY --from=BUILD /tmp/target /app/target
+WORKDIR /app/target
+RUN apt-get update && apt-get install telnet
+ENTRYPOINT ["java","-jar","/app/target/CentralServer-jar-with-dependencies.jar"]

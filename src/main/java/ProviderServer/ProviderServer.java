@@ -1,6 +1,5 @@
 package ProviderServer;
 
-import Zentral_Sensor.DataSender;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -15,9 +14,12 @@ import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TTransport;
-import org.apache.thrift.transport.TTransportException;
 
 public class ProviderServer {
+
+  static String separator = File.separator;
+  //static final String RESOURCE_FOLDER = "src" + separator + "main" + separator + "resources" + separator + "ProviderServerDatas";
+  static final String RESOURCE_FOLDER = "classes" + separator + "ProviderServerDatas";
 
   public static void main(String[] args) {
     ProviderServer providerServer = new ProviderServer();
@@ -32,11 +34,17 @@ public class ProviderServer {
           client.ping();
           String msg;
           msg = client.getSensorData("Thermometer");
-          providerServer.saveData(msg);
+          System.out.println("Data Received => " + msg);
+          if(!msg.equals("no data"))
+            providerServer.saveData(msg);
           msg = client.getSensorData("Hygrometer");
-          providerServer.saveData(msg);
+          System.out.println("Data Received => " + msg);
+          if(!msg.equals("no data"))
+            providerServer.saveData(msg);
           msg =  client.getSensorData("Light");
-          providerServer.saveData(msg);
+          System.out.println("Data Received => " + msg);
+          if(!msg.equals("no data"))
+            providerServer.saveData(msg);
           Thread.sleep(1000);
         }
       } catch (InterruptedException e) {
@@ -44,10 +52,8 @@ public class ProviderServer {
       } finally {
         transport.close();
       }
-    } catch (TTransportException e) {
+    } catch (TException e) {
       e.printStackTrace();
-    } catch (TException x) {
-      x.printStackTrace();
     }
   }
 
@@ -57,7 +63,7 @@ public class ProviderServer {
     String typeClient = msgArray[1];
     String infoClient = msgArray[2];
     String separator = File.separator;
-    String PATH = "src" + separator + "main" + separator + "resources" + separator + "ProviderServerDatas" + separator + typeClient + ".html";
+    String PATH = RESOURCE_FOLDER + separator + typeClient + ".html";
     Path path = Paths.get(PATH);
     Date today = new Date();
     try {
