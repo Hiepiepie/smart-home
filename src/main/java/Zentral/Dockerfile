@@ -8,8 +8,8 @@ WORKDIR /tmp/
 RUN mvn package
 
 FROM openjdk:11
-EXPOSE 1234
-EXPOSE 8080
+EXPOSE 1234/udp
+EXPOSE 8080/tcp
 COPY --from=BUILD /tmp/target /app/target
 WORKDIR /app/target
 

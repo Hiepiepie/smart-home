@@ -8,7 +8,7 @@ RUN mvn package
 
 #Finaler Container
 FROM openjdk:11
-EXPOSE 1234
+EXPOSE 1234/udp
 COPY --from=BUILD /tmp/target /app/target
 WORKDIR /app/target
 

@@ -1,43 +1,60 @@
 version: "3.6"
-
 services:
-
 #Thermometer
-    thermometer:
-        container_name: "thermometer"
-        build:
-            context: ""
-            dockerfile: src/main/java/Sensoren/Thermometer/Dockerfile
-        image: verteilte_systeme/thermometer
+   thermometer:
+       container_name: "Thermometer"
+       build:
+           context: ""
+           dockerfile: src/main/java/Sensoren/Thermometer/Dockerfile
+       image: verteilte_systeme/thermometer
+       networks:
+           verteilte_systeme:
+               ipv4_address: "172.20.0.11"
 
-    #Hygrometer
-    hygrometer:
-        container_name: "hygrometer"
-        build:
-            context: ""
-            dockerfile: src/main/java/Sensoren/Hygrometer/Dockerfile
-        image: verteilte_systeme/hygrometer
 
-    #Light
-    light:
-        container_name: "light"
-        build:
-            context: ""
-            dockerfile: src/main/java/Sensoren/Light/Dockerfile
-        image: verteilte_systeme/light
-    # Zentrale
-    zentrale:
+       #Hygrometer
+   hygrometer:
+       container_name: "Hygrometer"
+       build:
+           context: ""
+           dockerfile: src/main/java/Sensoren/Hygrometer/Dockerfile
+       image: verteilte_systeme/hygrometer
+       networks:
+           verteilte_systeme:
+               ipv4_address: "172.20.0.12"
+
+
+
+       #Light
+   light:
+       container_name: "Light"
+       build:
+           context: ""
+           dockerfile: src/main/java/Sensoren/Light/Dockerfile
+       image: verteilte_systeme/light
+       networks:
+           verteilte_systeme:
+               ipv4_address: "172.20.0.13"
+
+
+
+        # Zentrale
+   zentrale:
         container_name: "zentrale"
         build:
             context: ""
             dockerfile: src/main/java/Zentral/Dockerfile
         image: verteilte_systeme/zentrale
-
         ports:
             - "8080:8080"
             - "1234:1234"
+        networks:
+            verteilte_systeme:
+                ipv4_address: "172.20.0.2"
 
-   # Anbieter
+
+
+        # Anbieter
    provider:
        container_name: "provider"
        build:
@@ -46,11 +63,15 @@ services:
        image: verteilte_systeme/provider
        ports:
            - "9090:9090"
+       networks:
+           verteilte_systeme:
+               ipv4_address: "172.20.0.3"
 
-#    mainclass:
-#        container_name: "sensoren"
-#        build:
-#            context: ""
-#            dockerfile: src/main/java/Sensoren/Dockerfile
-#        image: verteilte_systeme/sensoren
 
+    #Netzwerk
+networks:
+    verteilte_systeme:
+        ipam:
+            driver: default
+            config:
+                - subnet: "172.20.0.0/16"
