@@ -8,17 +8,13 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-import Zentral_Sensor.DataSender;
-import Zentral_Sensor.DataSenderHandler;
-import Zentral.JavaHTTPServer;
+import ProviderServer.DataSender;
+import ProviderServer.DataSenderHandler;
 import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.TServer.Args;
 import org.apache.thrift.server.TSimpleServer;
-import org.apache.thrift.server.TThreadPoolServer;
-import org.apache.thrift.transport.TSSLTransportFactory;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TServerTransport;
-import org.apache.thrift.transport.TSSLTransportFactory.TSSLTransportParameters;
 
 
 public class Zentral implements Runnable{

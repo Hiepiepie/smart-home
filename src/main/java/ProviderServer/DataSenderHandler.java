@@ -1,4 +1,4 @@
-package Zentral_Sensor;
+package ProviderServer;
 
 import org.apache.thrift.TException;
 
