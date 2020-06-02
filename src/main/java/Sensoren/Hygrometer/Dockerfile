@@ -11,5 +11,5 @@ FROM openjdk:11
 EXPOSE 1234/udp
 COPY --from=BUILD /tmp/target /app/target
 WORKDIR /app/target
-
+RUN apt-get update && apt-get install telnet
 ENTRYPOINT ["java","-jar","/app/target/Hygrometer-jar-with-dependencies.jar"]

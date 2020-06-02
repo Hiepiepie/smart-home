@@ -12,5 +12,5 @@ EXPOSE 1234/udp
 EXPOSE 8080/tcp
 COPY --from=BUILD /tmp/target /app/target
 WORKDIR /app/target
-
+RUN apt-get update && apt-get install telnet
 ENTRYPOINT ["java","-jar","/app/target/CentralServer-jar-with-dependencies.jar"]

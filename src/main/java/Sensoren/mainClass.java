@@ -12,16 +12,17 @@ public class mainClass {
         ProcessBuilder pbHygrometer = new ProcessBuilder("java", "-cp", PATH , "Sensoren.Hygrometer.Hygrometer");
         ProcessBuilder pbLight = new ProcessBuilder("java", "-cp", PATH , "Sensoren.Light.Light");
         ProcessBuilder pbThermometer = new ProcessBuilder("java", "-cp", PATH , "Sensoren.Thermometer.Thermometer");
-
+        ProcessBuilder central = new ProcessBuilder("java", "-cp", PATH , "Sensoren.mainClass");
 
         Process pHygrometer = pbHygrometer.inheritIO().start();
         Process pLight = pbLight.inheritIO().start();
         Process pThermometer = pbThermometer.inheritIO().start();
-
+        Process pmain = central.inheritIO().start();
 
         pHygrometer.waitFor();
         pLight.waitFor();
         pThermometer.waitFor();
+        pmain.waitFor();
 
     }
 }
