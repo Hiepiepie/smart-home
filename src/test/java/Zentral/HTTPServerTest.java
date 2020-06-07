@@ -22,15 +22,18 @@ public class HTTPServerTest {
   String PATH = "target" + separator+"classes" ;
   ProcessBuilder pbhttpServer;
   JavaHTTPServer httpServer;
+  Zentral central;
 
   @Before
   public void setUp() throws IOException {
-    pbhttpServer = new ProcessBuilder("java", "-cp", PATH , "Zentral.JavaHTTPServer");
+    //pbhttpServer = new ProcessBuilder("java", "-cp", PATH , "Zentral.JavaHTTPServer");
+    mockSocket = new MockSocket();
+    httpServer = new JavaHTTPServer(mockSocket);
   }
 
   @After
-  public void tearDown() {
-
+  public void tearDown() throws IOException {
+    mockSocket.close();
   }
 
 //  @Test
@@ -60,23 +63,32 @@ public class HTTPServerTest {
 //    } catch (Exception e) {
 //      // assert that the exception is thrown and is the right exception
 //      assertEquals("Connection refused", e.getMessage().trim());
-   //  }
-  //}
+  //  }
+  //
 
   @Test
   public void serverAcceptRequestTest() throws IOException {
-    mockSocket = new MockSocket();
-    httpServer = new JavaHTTPServer(mockSocket);
     String request = httpServer.getRequestFrom(mockSocket).readLine();
     assertEquals("GET / HTTP/1.1", request);
   }
 
   @Test
-  public void serverSendsResponse() throws  IOException {
-    mockSocket = new MockSocket();
-    httpServer = new JavaHTTPServer(mockSocket);
+  public void serverSendsResponseTest() throws  IOException {
     httpServer.sendResponse(mockSocket,"test");
     String body = mockSocket.output();
     assertEquals("test", body);
   }
+
+  @Test
+  public void connectionTest() throws IOException, InterruptedException {
+    int counter = 0;
+    for (int i = 0; i < 10 ; i++){
+      httpServer.sendResponse(mockSocket,"ping");
+      String body = mockSocket.output();
+      if (body.equals("ping"))  counter++;
+      Thread.sleep(1000);
+    }
+    assertEquals(10, counter);
+  }
+
 }

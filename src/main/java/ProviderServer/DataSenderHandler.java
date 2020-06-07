@@ -15,15 +15,22 @@ public class DataSenderHandler implements DataSender.Iface {
 
   @Override
   public String getSensorData(String sensorType) throws TException {
+    String sentData;
     switch (sensorType){
       case "Thermometer":
-        return ThermosensorData;
+        sentData = ThermosensorData;
+        ThermosensorData = "no data";
+        return sentData;
       case "Hygrometer":
-        return HygrosensorData;
+        sentData = HygrosensorData;
+        HygrosensorData = "no data";
+        return sentData;
       case "Light":
-        return LightensorData;
+        sentData = LightensorData;
+        LightensorData = "no data";
+        return sentData;
       default:
-        return null;
+        return "Unknown Request";
     }
   }
 
