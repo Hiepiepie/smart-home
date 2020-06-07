@@ -310,16 +310,16 @@ public class JavaHTTPServer implements Runnable{
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         List<String> lines = new ArrayList<>();
         String line;
-        System.out.println("TESTTTT");
+
         while ((line = bufferedReader.readLine()) != null)
         {
             lines.add(line);
         }
-        System.out.println("TESTTTT");
+
         bufferedReader.close();
 
         for (String data: lines) {
-            System.out.println("TESTTTT");
+
             if (data.contains("| ID : " + dataRequested)){
                 String str = "<body style=\"background: antiquewhite; font-size: 15pt; text-align: center\">"+data;
                 BufferedWriter writer = new BufferedWriter(new FileWriter(HTML_FOLDER + separator + "data.html"));

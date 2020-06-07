@@ -33,53 +33,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="add configure network">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_high_scale_lib_high_scale_lib_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jamm_0_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_r08.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_cassandra_all_0_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_cassandra_thrift_0_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_deps_avro_1_4_0_cassandra_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_servlet_api_2_5_20081211.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProviderServer/ProviderServerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_2.xml" afterDir="false" />
+    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="option2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smart-home.iml" beforeDir="false" afterPath="$PROJECT_DIR$/smart-home.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProviderServer/DataSenderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProviderServer/DataSenderHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProviderServer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProviderServer/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProviderServer/ProviderServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProviderServer/ProviderServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/JavaHTTPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/JavaHTTPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Zentral/HTTPServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Zentral/HTTPServerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Zentral/MockSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Zentral/MockSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Zentral/UDPClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Zentral/UDPClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Brightness/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Brightness/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Humidity/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Humidity/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Temperatur/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Temperatur/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/smart-home.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ProviderServer/DataSenderHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProviderServer/DataSenderHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ProviderServer/ProviderServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProviderServer/ProviderServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Sensoren/UDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sensoren/UDPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Zentral/Zentral.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Zentral/Zentral.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/HTTPServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/HTTPServerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/MockSocket$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/MockSocket$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/MockSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/MockSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/UDPClientTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/UDPClientTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Light/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Light/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Thermometer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Thermometer/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/mainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/mainClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +62,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,12 +116,13 @@
       <recent name="D:\Studium\VS\smart-home\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HTTPServerTest">
-    <configuration name="HTTPServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Hygrometer">
+    <configuration name="Hygrometer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sensoren.Hygrometer.Hygrometer" />
       <module name="smart-home" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Zentral.*" />
+          <option name="PATTERN" value="Sensoren.Hygrometer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,61 +148,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderServerTest.connectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mainClass (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sensoren.mainClass" />
       <module name="smart-home" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ProviderServer.*" />
+          <option name="PATTERN" value="Sensoren.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ProviderServer" />
-      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
-      <option name="METHOD_NAME" value="connectionTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderServerTest.falseRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="mainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mainClass" />
       <module name="smart-home" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ProviderServer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ProviderServer" />
-      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
-      <option name="METHOD_NAME" value="falseRequestTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderServerTest.noSensorDataRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in smart-home" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-home" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ProviderServer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ProviderServer" />
-      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
-      <option name="METHOD_NAME" value="noSensorDataRequestTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HTTPServerTest" />
-        <item itemvalue="JUnit.ProviderServerTest" />
-        <item itemvalue="JUnit.ProviderServerTest.noSensorDataRequestTest" />
-        <item itemvalue="JUnit.ProviderServerTest.falseRequestTest" />
-        <item itemvalue="JUnit.ProviderServerTest.connectionTest" />
+        <item itemvalue="Application.Hygrometer" />
+        <item itemvalue="Application.Zentral" />
+        <item itemvalue="Application.mainClass (1)" />
+        <item itemvalue="JUnit.All in smart-home" />
+        <item itemvalue="Application.mainClass" />
       </list>
     </recent_temporary>
   </component>
@@ -290,9 +232,8 @@
       <workItem from="1591040880210" duration="68000" />
       <workItem from="1591040949576" duration="2153000" />
       <workItem from="1591043374235" duration="6854000" />
-      <workItem from="1591070948602" duration="4008000" />
-      <workItem from="1591106078042" duration="615000" />
-      <workItem from="1591338973941" duration="18394000" />
+      <workItem from="1591070948602" duration="7030000" />
+      <workItem from="1591078998815" duration="3097000" />
     </task>
     <task id="LOCAL-00001" summary="reconstruct">
       <created>1589275234692</created>
@@ -441,7 +382,28 @@
       <option name="project" value="LOCAL" />
       <updated>1591074387212</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add portainer manager">
+      <created>1591075106208</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1591075106208</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add portainer manager">
+      <created>1591075208602</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1591075208602</updated>
+    </task>
+    <task id="LOCAL-00024" summary="option2">
+      <created>1591080599779</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1591080599779</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +444,9 @@
     <MESSAGE value="first Draft" />
     <MESSAGE value="reconstruct" />
     <MESSAGE value="add configure network" />
-    <option name="LAST_COMMIT_MESSAGE" value="add configure network" />
+    <MESSAGE value="add portainer manager" />
+    <MESSAGE value="option2" />
+    <option name="LAST_COMMIT_MESSAGE" value="option2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1071" y="173" key="#Dockerfile" timestamp="1589490324656">
@@ -519,29 +483,25 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="766" y="331" key="FileChooserDialogImpl/0.0.1962.1152@0.0.1962.1152" timestamp="1590080260871" />
-    <state x="750" y="330" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1591107183717" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1591531128164">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="185" key="GridCell.Tab.0.bottom" timestamp="1591078698014">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="185" key="GridCell.Tab.0.bottom/0.0.1962.1152@0.0.1962.1152" timestamp="1591070683659" />
+    <state width="1919" height="185" key="GridCell.Tab.0.bottom/0.0.1962.1152@0.0.1962.1152" timestamp="1591078698014" />
     <state width="1928" height="319" key="GridCell.Tab.0.bottom/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591531128164" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1591531128162">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="185" key="GridCell.Tab.0.center" timestamp="1591078698014">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="185" key="GridCell.Tab.0.center/0.0.1962.1152@0.0.1962.1152" timestamp="1591070683659" />
+    <state width="1919" height="185" key="GridCell.Tab.0.center/0.0.1962.1152@0.0.1962.1152" timestamp="1591078698014" />
     <state width="1928" height="319" key="GridCell.Tab.0.center/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591531128162" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1591531128162">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="185" key="GridCell.Tab.0.left" timestamp="1591078698014">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="185" key="GridCell.Tab.0.left/0.0.1962.1152@0.0.1962.1152" timestamp="1591070683659" />
+    <state width="1919" height="185" key="GridCell.Tab.0.left/0.0.1962.1152@0.0.1962.1152" timestamp="1591078698014" />
     <state width="1928" height="319" key="GridCell.Tab.0.left/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591531128162" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1591531128163">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="185" key="GridCell.Tab.0.right" timestamp="1591078698014">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="185" key="GridCell.Tab.0.right/0.0.1962.1152@0.0.1962.1152" timestamp="1591070683659" />
+    <state width="1919" height="185" key="GridCell.Tab.0.right/0.0.1962.1152@0.0.1962.1152" timestamp="1591078698014" />
     <state width="1928" height="319" key="GridCell.Tab.0.right/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
     <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591531128163" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1591530951524">
@@ -592,10 +552,10 @@
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="466" y="150" key="SettingsEditor/0.0.1970.1152@0.0.1970.1152" timestamp="1589384635810" />
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591074389738">
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591080603186">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591074389738" />
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591080603186" />
     <state x="578" y="309" key="Vcs.Push.Dialog.v2/0.0.1970.1152@0.0.1970.1152" timestamp="1589275245392" />
     <state x="732" y="310" key="VcsDiffUtil.ChangesDialog" timestamp="1590643801804">
       <screen x="0" y="0" width="1962" height="1152" />

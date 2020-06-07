@@ -1,71 +1,102 @@
 version: "3.6"
 services:
-#Thermometer
-   thermometer:
-       container_name: "Thermometer"
-       build:
-           context: ""
-           dockerfile: src/main/java/Sensoren/Thermometer/Dockerfile
-       image: verteilte_systeme/thermometer
-       networks:
-           verteilte_systeme:
-               ipv4_address: "172.20.0.11"
+##Thermometer
+#   thermometer:
+#       container_name: "Thermometer"
+#       build:
+#           context: ""
+#           dockerfile: src/main/java/Sensoren/Thermometer/Dockerfile
+#       image: verteilte_systeme/thermometer
+#       environment:
+#           SENSOR_NAME: "Thermometer"
+#           SENSOR_TYPE: "Thermometer"
+#           ZENTRALE_IP: "172.20.0.2"
+#           ZENTRALE_PORT: "1234"
+#
+#       networks:
+#           verteilte_systeme:
+#               ipv4_address: "172.20.0.11"
+#
+#
+#       #Hygrometer
+#   hygrometer:
+#       container_name: "Hygrometer"
+#       build:
+#           context: ""
+#           dockerfile: src/main/java/Sensoren/Hygrometer/Dockerfile
+#       image: verteilte_systeme/hygrometer
+#       environment:
+#           SENSOR_NAME: "Hygrometer"
+#           SENSOR_TYPE: "Hygrometer"
+#           ZENTRALE_IP: "172.20.0.2"
+#           ZENTRALE_PORT: "1234"
+#
+#       networks:
+#           verteilte_systeme:
+#               ipv4_address: "172.20.0.12"
+#
+#
+#
+#       #Light
+#   light:
+#       container_name: "Light"
+#       build:
+#           context: ""
+#           dockerfile: src/main/java/Sensoren/Light/Dockerfile
+#       image: verteilte_systeme/light
+#       environment:
+#           SENSOR_NAME: "Light"
+#           SENSOR_TYPE: "Light"
+#           ZENTRALE_IP: "172.20.0.2"
+#           ZENTRALE_PORT: "1234"
+#
+#       networks:
+#           verteilte_systeme:
+#               ipv4_address: "172.20.0.13"
+   sensorandcentral:
+     container_name: "sns"
+     build:
+       context: ""
+       dockerfile: src/main/java/Sensoren/Dockerfile
+     image: verteilte_systeme/main
+     ports:
+                 - "8080:8080"
+                 - "1234:1234"
+     networks:
+       verteilte_systeme:
+         ipv4_address: "172.20.0.14"
 
 
-       #Hygrometer
-   hygrometer:
-       container_name: "Hygrometer"
-       build:
-           context: ""
-           dockerfile: src/main/java/Sensoren/Hygrometer/Dockerfile
-       image: verteilte_systeme/hygrometer
-       networks:
-           verteilte_systeme:
-               ipv4_address: "172.20.0.12"
+#
+#
+#       # Zentrale
+#   zentrale:
+#        container_name: "zentrale"
+#        build:
+#            context: ""
+#            dockerfile: src/main/java/Zentral/Dockerfile
+#        image: verteilte_systeme/zentrale
+#        ports:
+#            - "8080:8080"
+#            - "1234:1234"
+#        networks:
+#            verteilte_systeme:
+#                ipv4_address: "172.20.0.2"
+#
 
 
-
-       #Light
-   light:
-       container_name: "Light"
-       build:
-           context: ""
-           dockerfile: src/main/java/Sensoren/Light/Dockerfile
-       image: verteilte_systeme/light
-       networks:
-           verteilte_systeme:
-               ipv4_address: "172.20.0.13"
-
-
-
-        # Zentrale
-   zentrale:
-        container_name: "zentrale"
-        build:
-            context: ""
-            dockerfile: src/main/java/Zentral/Dockerfile
-        image: verteilte_systeme/zentrale
-        ports:
-            - "8080:8080"
-            - "1234:1234"
-        networks:
-            verteilte_systeme:
-                ipv4_address: "172.20.0.2"
-
-
-
-        # Anbieter
-   provider:
-       container_name: "provider"
-       build:
-           context: ""
-           dockerfile: src/main/java/ProviderServer/Dockerfile
-       image: verteilte_systeme/provider
-       ports:
-           - "9090:9090"
-       networks:
-           verteilte_systeme:
-               ipv4_address: "172.20.0.3"
+#        # Anbieter
+#   provider:
+#       container_name: "provider"
+#       build:
+#           context: ""
+#           dockerfile: src/main/java/ProviderServer/Dockerfile
+#       image: verteilte_systeme/provider
+#       ports:
+#           - "9090:9090"
+#       networks:
+#           verteilte_systeme:
+#               ipv4_address: "172.20.0.3"
 
    portainer:
            container_name: "portainer"
