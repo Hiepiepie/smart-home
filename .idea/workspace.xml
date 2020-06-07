@@ -137,16 +137,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren" />
-      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren\Hygrometer" />
-      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren\Light" />
-      <recent name="D:\Studium\VS\smart-home" />
-      <recent name="D:\Studium\VS\smart-home\src\test\java" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Zentral_Sensor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren\Thermometer" />
       <recent name="D:\Studium\VS\smart-home" />
@@ -154,8 +144,33 @@
       <recent name="D:\Studium\VS\smart-home\src\main\java\ProviderServer" />
       <recent name="D:\Studium\VS\smart-home\src\main\java\Zentral" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Zentral_Sensor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren" />
+      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren\Hygrometer" />
+      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren\Light" />
+      <recent name="D:\Studium\VS\smart-home" />
+      <recent name="D:\Studium\VS\smart-home\src\test\java" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProviderServerTest.noSensorDataRequestTest">
+  <component name="RunManager" selected="JUnit.HTTPServerTest">
+    <configuration name="HTTPServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="smart-home" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Zentral.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Zentral" />
+      <option name="MAIN_CLASS_NAME" value="Zentral.HTTPServerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProviderServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-home" />
       <extension name="coverage">
@@ -167,22 +182,6 @@
       <option name="PACKAGE_NAME" value="ProviderServer" />
       <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProviderServerTest.connectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="smart-home" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ProviderServer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ProviderServer" />
-      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
-      <option name="METHOD_NAME" value="connectTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -237,11 +236,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HTTPServerTest" />
+        <item itemvalue="JUnit.ProviderServerTest" />
         <item itemvalue="JUnit.ProviderServerTest.noSensorDataRequestTest" />
         <item itemvalue="JUnit.ProviderServerTest.falseRequestTest" />
         <item itemvalue="JUnit.ProviderServerTest.connectionTest" />
-        <item itemvalue="JUnit.ProviderServerTest" />
-        <item itemvalue="JUnit.ProviderServerTest.connectTest" />
       </list>
     </recent_temporary>
   </component>

@@ -61,21 +61,29 @@ public class ProviderServerTest {
     protocol = new TBinaryProtocol(transport);
     client = new DataSender.Client(protocol);
 
-    baos = new ByteArrayOutputStream();
-    ps = new PrintStream(baos);
-    old = System.out;
-    System.setOut(ps);
-
     transport.open();
   }
 
   @AfterClass
   public static void suiteTeardown() throws TTransportException, InterruptedException {
-    System.out.flush();
-    System.setOut(old);
     transport.close();
     Thread.sleep(10000);
   }
+
+  @Before
+  public void setUp() throws IOException {
+    baos = new ByteArrayOutputStream();
+    ps = new PrintStream(baos);
+    old = System.out;
+    System.setOut(ps);
+  }
+
+  @After
+  public void tearDown() throws IOException {
+    System.out.flush();
+    System.setOut(old);
+  }
+
 
   @Test
   public void connectTest() throws TException {
