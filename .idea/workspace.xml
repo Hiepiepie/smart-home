@@ -34,11 +34,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="add configure network">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_high_scale_lib_high_scale_lib_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jamm_0_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_r08.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_cassandra_all_0_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_cassandra_thrift_0_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cassandra_deps_avro_1_4_0_cassandra_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_servlet_api_2_5_20081211.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProviderServer/ProviderServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart-home.iml" beforeDir="false" afterPath="$PROJECT_DIR$/smart-home.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProviderServer/DataSenderHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProviderServer/DataSenderHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProviderServer/ProviderServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProviderServer/ProviderServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/JavaHTTPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/JavaHTTPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Zentral/HTTPServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Zentral/HTTPServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Zentral/MockSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Zentral/MockSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Zentral/UDPClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Zentral/UDPClientTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Brightness/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Brightness/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Humidity/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Humidity/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CentralDatas/Temperatur/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CentralDatas/Temperatur/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/smart-home.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ProviderServer/DataSenderHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProviderServer/DataSenderHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ProviderServer/ProviderServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProviderServer/ProviderServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sensoren/UDPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sensoren/UDPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Zentral/Zentral.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Zentral/Zentral.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/HTTPServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/HTTPServerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/MockSocket$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/MockSocket$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/MockSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/MockSocket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/UDPClientTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/UDPClientTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +106,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -88,7 +130,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Sensoren" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -113,9 +155,8 @@
       <recent name="D:\Studium\VS\smart-home\src\main\java\Zentral" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Zentral">
-    <configuration name="ProviderServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServer" />
+  <component name="RunManager" selected="JUnit.ProviderServerTest.noSensorDataRequestTest">
+    <configuration name="ProviderServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-home" />
       <extension name="coverage">
         <pattern>
@@ -123,49 +164,72 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ProviderServer" />
+      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Zentral" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Zentral.Zentral" />
+    <configuration name="ProviderServerTest.connectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-home" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Sensoren.Hygrometer.*" />
+          <option name="PATTERN" value="ProviderServer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ProviderServer" />
+      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
+      <option name="METHOD_NAME" value="connectTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="mainClass" />
-      <module name="smart-home" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in smart-home" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="smart-home" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HTTPServerTest.serverAcceptConnectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProviderServerTest.connectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="smart-home" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Zentral.*" />
+          <option name="PATTERN" value="ProviderServer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Zentral" />
-      <option name="MAIN_CLASS_NAME" value="Zentral.HTTPServerTest" />
-      <option name="METHOD_NAME" value="serverAcceptConnectionTest" />
+      <option name="PACKAGE_NAME" value="ProviderServer" />
+      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
+      <option name="METHOD_NAME" value="connectionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderServerTest.falseRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="smart-home" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProviderServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProviderServer" />
+      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
+      <option name="METHOD_NAME" value="falseRequestTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderServerTest.noSensorDataRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="smart-home" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProviderServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProviderServer" />
+      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
+      <option name="METHOD_NAME" value="noSensorDataRequestTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,11 +237,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Zentral" />
-        <item itemvalue="JUnit.All in smart-home" />
-        <item itemvalue="Application.mainClass" />
-        <item itemvalue="Application.ProviderServer" />
-        <item itemvalue="JUnit.HTTPServerTest.serverAcceptConnectionTest" />
+        <item itemvalue="JUnit.ProviderServerTest.noSensorDataRequestTest" />
+        <item itemvalue="JUnit.ProviderServerTest.falseRequestTest" />
+        <item itemvalue="JUnit.ProviderServerTest.connectionTest" />
+        <item itemvalue="JUnit.ProviderServerTest" />
+        <item itemvalue="JUnit.ProviderServerTest.connectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -228,6 +292,8 @@
       <workItem from="1591040949576" duration="2153000" />
       <workItem from="1591043374235" duration="6854000" />
       <workItem from="1591070948602" duration="4008000" />
+      <workItem from="1591106078042" duration="615000" />
+      <workItem from="1591338973941" duration="18394000" />
     </task>
     <task id="LOCAL-00001" summary="reconstruct">
       <created>1589275234692</created>
@@ -428,11 +494,20 @@
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="466" y="150" key="#Project_Structure/0.0.1970.1152@0.0.1970.1152" timestamp="1589389299072" />
-    <state x="788" y="282" key="#com.intellij.ide.util.MemberChooser" timestamp="1589478638524">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state x="100" y="127" width="1720" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1591530596567">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="100" y="127" width="1720" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591530596567" />
+    <state x="771" y="285" width="374" height="594" key="#com.intellij.ide.util.MemberChooser" timestamp="1591351307733">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="788" y="282" key="#com.intellij.ide.util.MemberChooser/0.0.1962.1152@0.0.1962.1152" timestamp="1589478638524" />
     <state x="791" y="282" key="#com.intellij.ide.util.MemberChooser/0.0.1970.1152@0.0.1970.1152" timestamp="1589409415578" />
+    <state x="771" y="285" width="374" height="594" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1591351307733" />
+    <state x="717" y="419" width="486" height="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591530968402">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="717" y="419" width="486" height="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1920.1053@0.27.1920.1053" timestamp="1591530968402" />
     <state x="516" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589343936444">
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
@@ -441,50 +516,59 @@
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
     <state x="93" y="93" width="1776" height="966" key="DiffContextDialog/0.0.1962.1152@0.0.1962.1152" timestamp="1590643933242" />
-    <state x="766" y="331" key="FileChooserDialogImpl" timestamp="1590080260871">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state x="750" y="330" width="424" height="491" key="FileChooserDialogImpl" timestamp="1591107183717">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="766" y="331" key="FileChooserDialogImpl/0.0.1962.1152@0.0.1962.1152" timestamp="1590080260871" />
-    <state width="1919" height="185" key="GridCell.Tab.0.bottom" timestamp="1591070683659">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state x="750" y="330" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1591107183717" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1591531128164">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1919" height="185" key="GridCell.Tab.0.bottom/0.0.1962.1152@0.0.1962.1152" timestamp="1591070683659" />
     <state width="1928" height="319" key="GridCell.Tab.0.bottom/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1919" height="185" key="GridCell.Tab.0.center" timestamp="1591070683659">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591531128164" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1591531128162">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1919" height="185" key="GridCell.Tab.0.center/0.0.1962.1152@0.0.1962.1152" timestamp="1591070683659" />
     <state width="1928" height="319" key="GridCell.Tab.0.center/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1919" height="185" key="GridCell.Tab.0.left" timestamp="1591070683659">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591531128162" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1591531128162">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1919" height="185" key="GridCell.Tab.0.left/0.0.1962.1152@0.0.1962.1152" timestamp="1591070683659" />
     <state width="1928" height="319" key="GridCell.Tab.0.left/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1919" height="185" key="GridCell.Tab.0.right" timestamp="1591070683659">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591531128162" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1591531128163">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1919" height="185" key="GridCell.Tab.0.right/0.0.1962.1152@0.0.1962.1152" timestamp="1591070683659" />
     <state width="1928" height="319" key="GridCell.Tab.0.right/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1919" height="392" key="GridCell.Tab.1.bottom" timestamp="1590645170697">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591531128163" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1591530951524">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1919" height="392" key="GridCell.Tab.1.bottom/0.0.1962.1152@0.0.1962.1152" timestamp="1590645170697" />
     <state width="1928" height="392" key="GridCell.Tab.1.bottom/0.0.1970.1152@0.0.1970.1152" timestamp="1589407209639" />
-    <state width="1919" height="392" key="GridCell.Tab.1.center" timestamp="1590645170697">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1591530951524" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1591530951524">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1919" height="392" key="GridCell.Tab.1.center/0.0.1962.1152@0.0.1962.1152" timestamp="1590645170697" />
     <state width="1928" height="392" key="GridCell.Tab.1.center/0.0.1970.1152@0.0.1970.1152" timestamp="1589407209639" />
-    <state width="1919" height="392" key="GridCell.Tab.1.left" timestamp="1590645170697">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1591530951524" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1591530951524">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1919" height="392" key="GridCell.Tab.1.left/0.0.1962.1152@0.0.1962.1152" timestamp="1590645170697" />
     <state width="1928" height="392" key="GridCell.Tab.1.left/0.0.1970.1152@0.0.1970.1152" timestamp="1589407209639" />
-    <state width="1919" height="392" key="GridCell.Tab.1.right" timestamp="1590645170697">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1591530951524" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1591530951524">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1919" height="392" key="GridCell.Tab.1.right/0.0.1962.1152@0.0.1962.1152" timestamp="1590645170697" />
     <state width="1928" height="392" key="GridCell.Tab.1.right/0.0.1970.1152@0.0.1970.1152" timestamp="1589407209639" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1591530951524" />
     <state x="516" y="231" key="Maven.ArtifactSearchDialog" timestamp="1589400572498">
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
@@ -501,6 +585,10 @@
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
     <state x="762" y="207" width="438" height="775" key="RefactorJ.IntroduceParameterObject/0.0.1962.1152@0.0.1962.1152" timestamp="1589471915894" />
+    <state x="744" y="245" width="422" height="623" key="RollbackChangesDialog" timestamp="1591339814365">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="744" y="245" width="422" height="623" key="RollbackChangesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591339814365" />
     <state x="466" y="150" key="SettingsEditor" timestamp="1589384635810">
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
@@ -522,11 +610,16 @@
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
     <state x="1254" y="531" width="391" height="372" key="com.intellij.docker.deployment.ui.DockerVolumeBindingsField.v173.dialogSize/0.0.1962.1152@0.0.1962.1152" timestamp="1589490316313" />
-    <state x="793" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591040933358">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state x="570" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591361846139">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="570" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1591361846139" />
+    <state x="776" y="475" width="450" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591339679439">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="793" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591040933358" />
     <state x="796" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1970.1152@0.0.1970.1152" timestamp="1589343839006" />
+    <state x="776" y="475" width="450" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1591339679439" />
     <state x="540" y="305" width="891" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589445758235">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
@@ -545,10 +638,11 @@
     </state>
     <state x="777" y="323" key="refactoring.ChangeSignatureDialog/0.0.1962.1152@0.0.1962.1152" timestamp="1589472663247" />
     <state x="780" y="323" key="refactoring.ChangeSignatureDialog/0.0.1970.1152@0.0.1970.1152" timestamp="1589348041947" />
-    <state x="644" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1591006476229">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state x="630" y="258" width="672" height="620" key="search.everywhere.popup" timestamp="1591355080729">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="644" y="253" width="672" height="678" key="search.everywhere.popup/0.0.1962.1152@0.0.1962.1152" timestamp="1591006476229" />
+    <state x="630" y="258" width="672" height="620" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1591355080729" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/smart_home$All_in_smart_home.ic" NAME="All in smart-home Coverage Results" MODIFIED="1590472931031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

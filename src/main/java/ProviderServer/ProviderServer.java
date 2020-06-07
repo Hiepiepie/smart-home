@@ -31,7 +31,6 @@ public class ProviderServer {
         TProtocol protocol = new TBinaryProtocol(transport);
         DataSender.Client client = new DataSender.Client(protocol);
         while (true){
-          client.ping();
           String msg;
           msg = client.getSensorData("Thermometer");
           System.out.println("Data Received => " + msg);

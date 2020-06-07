@@ -207,6 +207,7 @@ public class Zentral implements Runnable{
             e.printStackTrace();
         }
     }
+
     @Override
     public void run() {
         try {

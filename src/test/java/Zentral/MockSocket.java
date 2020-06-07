@@ -35,6 +35,7 @@ public class MockSocket extends Socket {
   // it is used to return the string formed by the bytes added to 'bytesList'
   public String output() {
     byte[] converted = toByteArray(bytesList);
+    bytesList = new ArrayList<>();
     return new String(converted, StandardCharsets.UTF_8);
   }
 
