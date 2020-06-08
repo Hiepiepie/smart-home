@@ -84,7 +84,6 @@ public class JavaHTTPServer implements Runnable{
                 if (verbose) {
                     System.out.println("File " + fileRequested + " of type " + content + " returned");
                 }
-
             }
 
         } catch (FileNotFoundException fnfe) {
@@ -110,8 +109,6 @@ public class JavaHTTPServer implements Runnable{
                 System.out.println("Connection closed.\n");
             }
         }
-
-
     }
 
     private String handleGetHead(PrintWriter out, BufferedOutputStream dataOut, String fileRequested, String method) throws IOException {
@@ -338,7 +335,6 @@ public class JavaHTTPServer implements Runnable{
         while ((line = in.read()) != -1)
         {
             lines.append((char)line);
-            //System.out.print((char)line);
             if (lines.toString().contains("\r\n\r\n")) return true;
         }
         return false;
