@@ -33,25 +33,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="minor changes">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2020_11_09_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2020_11_09_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/HTTPServerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/JavaHTTPServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/UDPClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/smart-home.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM__Default_Changelist_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_1_2020_9_48_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_1_2020_9_48_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProviderServer/ProviderServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProviderServer/ProviderServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/mainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/mainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/Dockerfile" afterDir="false" />
+    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="blah blah">
       <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/JavaHTTPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/JavaHTTPServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Sensoren/mainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Sensoren/mainClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Zentral/JavaHTTPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Zentral/JavaHTTPServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Zentral/Zentral.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Zentral/Zentral.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Zentral/HTTPServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Zentral/HTTPServerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,9 +114,9 @@
       <recent name="D:\Studium\VS\smart-home\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Zentral">
+  <component name="RunManager" selected="Application.Hygrometer">
     <configuration name="Hygrometer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Sensoren.Hygrometer.Hygrometer" />
+      <option name="MAIN_CLASS_NAME" value="Zentral.HTTPServerTest" />
       <module name="smart-home" />
       <extension name="coverage">
         <pattern>
@@ -137,24 +124,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Zentral" />
-      <option name="MAIN_CLASS_NAME" value="Zentral.HTTPServerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProviderServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="smart-home" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ProviderServer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ProviderServer" />
-      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,9 +156,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProviderServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="smart-home" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ProviderServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ProviderServer" />
+      <option name="MAIN_CLASS_NAME" value="ProviderServer.ProviderServerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Zentral" />
         <item itemvalue="Application.Hygrometer" />
         <item itemvalue="Application.mainClass (1)" />
         <item itemvalue="JUnit.All in smart-home" />
@@ -248,7 +231,7 @@
       <workItem from="1591340098022" duration="348000" />
       <workItem from="1591617921793" duration="637000" />
       <workItem from="1591619672691" duration="474000" />
-      <workItem from="1591620509994" duration="3732000" />
+      <workItem from="1591620509994" duration="4119000" />
     </task>
     <task id="LOCAL-00001" summary="reconstruct">
       <created>1589275234692</created>
@@ -425,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591340147134</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="blah blah">
+      <created>1591624669855</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1591624669855</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +458,8 @@
     <MESSAGE value="add portainer manager" />
     <MESSAGE value="option2" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="blah blah" />
+    <option name="LAST_COMMIT_MESSAGE" value="blah blah" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1071" y="173" key="#Dockerfile" timestamp="1589490324656">

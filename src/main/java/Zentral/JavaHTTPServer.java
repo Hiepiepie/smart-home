@@ -47,21 +47,20 @@ public class JavaHTTPServer implements Runnable{
         String fileRequested = null;
 
         try {
-
             // we read characters from the client via input stream on the socket
             in = getRequestFrom(clientSocket);
             // we get character output stream to client (for headers)
             out = getPrinterWriterOut(clientSocket);
             // get binary output stream to client (for requested data)
             dataOut = new BufferedOutputStream(clientSocket.getOutputStream());
-            //check valid HTTP Request
+
+           //get and check the Request from buffer reader
             StringBuilder lines = new StringBuilder();
             while (!checkValidRequest(lines,in)){
                 in = getRequestFrom(clientSocket);
             }
-            // get first line of the request from the client
+            //convert full Request to String
             String input = lines.toString();
-
 
             // we parse the request with a string tokenizer
             StringTokenizer parse = new StringTokenizer(input);
@@ -329,8 +328,7 @@ public class JavaHTTPServer implements Runnable{
         out.flush();
     }
 
-    private boolean checkValidRequest(StringBuilder lines,BufferedReader in) throws IOException {
-
+    private boolean checkValidRequest(StringBuilder lines, BufferedReader in) throws IOException {
         int line;
         while ((line = in.read()) != -1)
         {
