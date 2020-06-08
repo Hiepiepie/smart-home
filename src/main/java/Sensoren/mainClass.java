@@ -5,9 +5,6 @@ import java.io.File;
 public class mainClass {
 
     public static void main(String[] args) throws Exception {
-        String separator = File.separator;
-        separator = System.getProperty("file.separator");
-        String PATH = "classes" ;
         ProcessBuilder central = new ProcessBuilder("java", "-jar", "CentralServer-jar-with-dependencies.jar");
         ProcessBuilder pbHygrometer = new ProcessBuilder("java", "-jar", "Hygrometer-jar-with-dependencies.jar");
         ProcessBuilder pbLight = new ProcessBuilder("java", "-jar",  "Light-jar-with-dependencies.jar");

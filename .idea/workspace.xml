@@ -33,14 +33,25 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="option2">
+    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="minor changes">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2020_11_09_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2020_11_09_AM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/HTTPServerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/JavaHTTPServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/UDPClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM_[Default_Changelist]1/smart-home.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_30_2020_9_55_PM__Default_Changelist_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_1_2020_9_48_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_1_2020_9_48_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ProviderServer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProviderServer/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProviderServer/ProviderServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProviderServer/ProviderServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Light/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Light/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Thermometer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Thermometer/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Sensoren/mainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sensoren/mainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/JavaHTTPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/JavaHTTPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +101,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Sensoren" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -115,7 +126,7 @@
       <recent name="D:\Studium\VS\smart-home\src\main\java\Zentral" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Hygrometer">
+  <component name="RunManager" selected="Application.Zentral">
     <configuration name="Hygrometer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Sensoren.Hygrometer.Hygrometer" />
       <module name="smart-home" />
@@ -172,8 +183,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Hygrometer" />
         <item itemvalue="Application.Zentral" />
+        <item itemvalue="Application.Hygrometer" />
         <item itemvalue="Application.mainClass (1)" />
         <item itemvalue="JUnit.All in smart-home" />
         <item itemvalue="Application.mainClass" />
@@ -228,6 +239,10 @@
       <workItem from="1591043374235" duration="6854000" />
       <workItem from="1591070948602" duration="7030000" />
       <workItem from="1591078998815" duration="3097000" />
+      <workItem from="1591340098022" duration="348000" />
+      <workItem from="1591617921793" duration="637000" />
+      <workItem from="1591619672691" duration="474000" />
+      <workItem from="1591620509994" duration="3732000" />
     </task>
     <task id="LOCAL-00001" summary="reconstruct">
       <created>1589275234692</created>
@@ -397,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591080599779</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="minor changes">
+      <created>1591340147134</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1591340147134</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,13 +456,13 @@
     <MESSAGE value="update details" />
     <MESSAGE value="praktikum 4 init" />
     <MESSAGE value="Temporar" />
-    <MESSAGE value="minor changes" />
     <MESSAGE value="first Draft" />
     <MESSAGE value="reconstruct" />
     <MESSAGE value="add configure network" />
     <MESSAGE value="add portainer manager" />
     <MESSAGE value="option2" />
-    <option name="LAST_COMMIT_MESSAGE" value="option2" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1071" y="173" key="#Dockerfile" timestamp="1589490324656">
@@ -528,10 +550,10 @@
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="466" y="150" key="SettingsEditor/0.0.1970.1152@0.0.1970.1152" timestamp="1589384635810" />
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591080603186">
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591340149318">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591080603186" />
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591340149318" />
     <state x="578" y="309" key="Vcs.Push.Dialog.v2/0.0.1970.1152@0.0.1970.1152" timestamp="1589275245392" />
     <state x="732" y="310" key="VcsDiffUtil.ChangesDialog" timestamp="1590643801804">
       <screen x="0" y="0" width="1962" height="1152" />

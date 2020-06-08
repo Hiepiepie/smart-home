@@ -40,29 +40,6 @@ public class JavaHTTPServer implements Runnable{
         clientSocket = c;
     }
 
-//    public static void main(String[] args) {
-//        try {
-//            ServerSocket serverConnect = new ServerSocket(PORT);
-//            System.out.println("Server started.\nListening for connections on port : " + PORT + " ...\n");
-//
-//            // we listen until user halts server execution
-//            while (true) {
-//                JavaHTTPServer myServer = new JavaHTTPServer(serverConnect.accept());
-//
-//                if (verbose) {
-//                    System.out.println("Connection opened. (" + new Date() + ")");
-//                }
-//
-//                // create dedicated thread to manage the client connection
-//                Thread thread = new Thread(myServer);
-//                thread.start();
-//            }
-//
-//        } catch (IOException e) {
-//            System.err.println("Server Connection error : " + e.getMessage());
-//        }
-//    }
-
     @Override
     public void run() {
         // we manage our particular client connection
@@ -70,20 +47,21 @@ public class JavaHTTPServer implements Runnable{
         String fileRequested = null;
 
         try {
+
             // we read characters from the client via input stream on the socket
             in = getRequestFrom(clientSocket);
             // we get character output stream to client (for headers)
             out = getPrinterWriterOut(clientSocket);
             // get binary output stream to client (for requested data)
             dataOut = new BufferedOutputStream(clientSocket.getOutputStream());
-
-            // get first line of the request from the client
-            String input = in.readLine();
-
             //check valid HTTP Request
-            if(!checkValidRequest(in)){
-                throw new FileNotFoundException();
+            StringBuilder lines = new StringBuilder();
+            while (!checkValidRequest(lines,in)){
+                in = getRequestFrom(clientSocket);
             }
+            // get first line of the request from the client
+            String input = lines.toString();
+
 
             // we parse the request with a string tokenizer
             StringTokenizer parse = new StringTokenizer(input);
@@ -354,8 +332,8 @@ public class JavaHTTPServer implements Runnable{
         out.flush();
     }
 
-    private boolean checkValidRequest(BufferedReader in) throws IOException {
-        StringBuilder lines = new StringBuilder();
+    private boolean checkValidRequest(StringBuilder lines,BufferedReader in) throws IOException {
+
         int line;
         while ((line = in.read()) != -1)
         {

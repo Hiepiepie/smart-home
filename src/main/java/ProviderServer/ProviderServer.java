@@ -34,15 +34,15 @@ public class ProviderServer {
           client.ping();
           String msg;
           msg = client.getSensorData("Thermometer");
-          System.out.println("Data Received => " + msg);
+          System.out.println("Provider Server : Data Received => " + msg);
           if(!msg.equals("no data"))
             providerServer.saveData(msg);
           msg = client.getSensorData("Hygrometer");
-          System.out.println("Data Received => " + msg);
+          System.out.println("Provider Server : Data Received => " + msg);
           if(!msg.equals("no data"))
             providerServer.saveData(msg);
           msg =  client.getSensorData("Light");
-          System.out.println("Data Received => " + msg);
+          System.out.println("Provider Server : Data Received => " + msg);
           if(!msg.equals("no data"))
             providerServer.saveData(msg);
           Thread.sleep(1000);

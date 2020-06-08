@@ -85,7 +85,6 @@ public class Zentral implements Runnable{
         ia = InetAddress.getLocalHost();
         this.ds = new DatagramSocket(port);
         checkBuffer = new HashMap<>();
-        dp = new DatagramPacket(buf, buf.length, ia, port);
     }
 
 
