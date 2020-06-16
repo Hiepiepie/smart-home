@@ -4,6 +4,7 @@ import Sensoren.UDPClient;
 
 public class Thermometer extends UDPClient {
 
+
     public static void main(String[] args) throws Exception {
         System.out.println("Thermometer started");
         Thermometer h = new Thermometer();
@@ -11,7 +12,7 @@ public class Thermometer extends UDPClient {
             //msg will be in Form like : (SensorData ID);(Sensor Type);(SensorData Information)
             // ex : 122;Humidity;50%
             String msg = h.getId() + ";" + h.getType()+ ";" + h.getInfoUpdate();
-            h.sendPackage(msg);
+            h.sendPackage(msg, "Thermometer");
 
         }
     }

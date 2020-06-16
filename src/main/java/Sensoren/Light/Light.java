@@ -11,8 +11,7 @@ public class Light extends UDPClient {
             //msg will be in Form like : (SensorData ID);(Sensor Type);(SensorData Information)
             // ex : 122;Humidity;50%
             String msg = h.getId() + ";" + h.getType()+ ";" + h.getInfoUpdate();
-            h.sendPackage(msg);
-//            Thread.sleep(1000);
+            h.sendPackage(msg, "Light");
         }
     }
 
