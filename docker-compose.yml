@@ -1,127 +1,129 @@
 version: "3.6"
 services:
-##Thermometer
-#   thermometer:
-#       container_name: "Thermometer"
-#       build:
-#           context: ""
-#           dockerfile: src/main/java/Sensoren/Thermometer/Dockerfile
-#       image: verteilte_systeme/thermometer
-#       environment:
-#           SENSOR_NAME: "Thermometer"
-#           SENSOR_TYPE: "Thermometer"
-#           ZENTRALE_IP: "172.20.0.2"
-#           ZENTRALE_PORT: "1234"
-#
-#       networks:
-#           verteilte_systeme:
-#               ipv4_address: "172.20.0.11"
-#
-#
-#       #Hygrometer
-#   hygrometer:
-#       container_name: "Hygrometer"
-#       build:
-#           context: ""
-#           dockerfile: src/main/java/Sensoren/Hygrometer/Dockerfile
-#       image: verteilte_systeme/hygrometer
-#       environment:
-#           SENSOR_NAME: "Hygrometer"
-#           SENSOR_TYPE: "Hygrometer"
-#           ZENTRALE_IP: "172.20.0.2"
-#           ZENTRALE_PORT: "1234"
-#
-#       networks:
-#           verteilte_systeme:
-#               ipv4_address: "172.20.0.12"
-#
-#
-#
-#       #Light
-#   light:
-#       container_name: "Light"
-#       build:
-#           context: ""
-#           dockerfile: src/main/java/Sensoren/Light/Dockerfile
-#       image: verteilte_systeme/light
-#       environment:
-#           SENSOR_NAME: "Light"
-#           SENSOR_TYPE: "Light"
-#           ZENTRALE_IP: "172.20.0.2"
-#           ZENTRALE_PORT: "1234"
-#
-#       networks:
-#           verteilte_systeme:
-#               ipv4_address: "172.20.0.13"
+  #Thermometer
+  thermometer:
+    container_name: "Thermometer"
+    build:
+      context: ""
+      dockerfile: src/main/java/Sensoren/Thermometer/Dockerfile
+    image: verteilte_systeme/thermometer
+    restart: always
+    networks:
+      verteilte_systeme:
+        ipv4_address: 172.20.1.5
 
 
-   sensorandcentral:
-     container_name: "sns"
-     build:
-       context: ""
-       dockerfile: src/main/java/Sensoren/Dockerfile
-     image: verteilte_systeme/main
-     ports:
-                 - "8080:8080"
-                 - "1234:1234"
-     networks:
-       verteilte_systeme:
-         ipv4_address: "172.20.0.14"
+    #Hygrometer
+  hygrometer:
+    container_name: "Hygrometer"
+    build:
+      context: ""
+      dockerfile: src/main/java/Sensoren/Hygrometer/Dockerfile
+    image: verteilte_systeme/hygrometer
+    restart: always
+    networks:
+      verteilte_systeme:
+        ipv4_address: 172.20.1.6
 
 
 
-#
-#       # Zentrale
-#   zentrale:
-#        container_name: "zentrale"
-#        build:
-#            context: ""
-#            dockerfile: src/main/java/Zentral/Dockerfile
-#        image: verteilte_systeme/zentrale
-#        ports:
-#            - "8080:8080"
-#            - "1234:1234"
-#        networks:
-#            verteilte_systeme:
-#                ipv4_address: "172.20.0.2"
-#
-#
-#
-#        # Anbieter
-#   provider:
-#       container_name: "provider"
-#       build:
-#           context: ""
-#           dockerfile: src/main/java/ProviderServer/Dockerfile
-#       image: verteilte_systeme/provider
-#       ports:
-#           - "9090:9090"
-#       networks:
-#           verteilte_systeme:
-#               ipv4_address: "172.20.0.3"
+    #Light
+  light:
+    container_name: "Light"
+    build:
+      context: ""
+      dockerfile: src/main/java/Sensoren/Light/Dockerfile
+    image: verteilte_systeme/light
+    restart: always
+    networks:
+      verteilte_systeme:
+        ipv4_address: 172.20.1.7
 
-   portainer:
-           container_name: "portainer"
-           image: portainer/portainer
-           volumes:
-               - /var/run/docker.sock:/var/run/docker.sock
-               - portainer_data:/data
 
-           ports:
-               - "81:9000"
+  #  sensorandcentral:
+  #    container_name: "sns"
+  #    build:
+  #      context: ""
+  #      dockerfile: src/main/java/Sensoren/Dockerfile
+  #    image: verteilte_systeme/main
+  #    restart: always
+  #    ports:
+  #      - "8080:8080"
+  #      - "1234:1234"
+  #    networks:
+  #      verteilte_systeme:
+  #        ipv4_address: "172.20.0.14"
 
-           networks:
-               verteilte_systeme:
-                   ipv4_address: "172.20.0.10"
+
+  #MQTT
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto
+    restart: always
+    #    volumes:
+    #      - ~/IdeaProjects/smart-home/mosquitto/config:/mosquitto/config
+    #      - ~/IdeaProjects/smart-home/mosquitto/data:/mosquitto/data
+    #      - ~/IdeaProjects/smart-home/mosquitto/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      - 9001:9001
+    networks:
+      verteilte_systeme:
+        ipv4_address: 172.20.1.1
+
+
+        # Zentrale
+  zentrale:
+    container_name: "zentrale"
+    build:
+      context: ""
+      dockerfile: src/main/java/Zentral/Dockerfile
+    image: verteilte_systeme/zentrale
+    ports:
+      - 8080:8080
+      - 1234:1234
+    networks:
+      verteilte_systeme:
+        ipv4_address: 172.20.1.8
+
+
+    # Anbieter
+  provider:
+    container_name: "provider"
+    build:
+      context: ""
+      dockerfile: src/main/java/ProviderServer/Dockerfile
+    image: verteilte_systeme/provider
+    restart: always
+    ports:
+      - 9090:9090
+    networks:
+      verteilte_systeme:
+        ipv4_address: 172.20.1.9
+
+
+  portainer:
+    container_name: "portainer"
+    image: portainer/portainer
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+    ports:
+      - 81:9000
+
+    networks:
+      verteilte_systeme:
+        ipv4_address: 172.20.0.10
 
 
     #Volumes
 volumes:
-    portainer_data:
-       #Netzwerk
+  portainer_data:
+  #Netzwerk
 networks:
-    verteilte_systeme:
-        ipam:
-            driver: default
-            config:
-                - subnet: "172.20.0.0/16"
+  verteilte_systeme:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16

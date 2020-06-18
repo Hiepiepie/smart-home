@@ -4,16 +4,15 @@ import Sensoren.UDPClient;
 
 public class Thermometer extends UDPClient {
 
+    private static final String SENSOR_NAME = "Thermometer";
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Thermometer started");
+        Thread.sleep(5000);
         Thermometer h = new Thermometer();
+        h.connectMqtt();
+        System.out.println("Thermometer started");
         while (true){
-            //msg will be in Form like : (SensorData ID);(Sensor Type);(SensorData Information)
-            // ex : 122;Humidity;50%
-            String msg = h.getId() + ";" + h.getType()+ ";" + h.getInfoUpdate();
-            h.sendPackage(msg, "Thermometer");
-
+            h.sendData(h.getDataUpdate(),h.getUnit(),SENSOR_NAME);
         }
     }
 
@@ -27,11 +26,11 @@ public class Thermometer extends UDPClient {
         return temp;
     }
 
-    public String getType(){
+    public String getUnit(){
         return "Temperatur";
     }
 
-    public String getInfoUpdate() {
+    public String getDataUpdate() {
         temp += (rand.nextBoolean() ? 1 : -1);
         if(temp >= 40) temp -= 1;
         if(temp <= -5) temp += 1;

@@ -4,32 +4,30 @@ import Sensoren.UDPClient;
 
 public class Light extends UDPClient {
 
+    private static final String SENSOR_NAME = "Light";
+
     public static void main(String[] args) throws Exception {
-        System.out.println("Light started");
+        Thread.sleep(5000);
         Light h = new Light();
+        h.connectMqtt();
+        System.out.println("Light started");
         while (true){
-            //msg will be in Form like : (SensorData ID);(Sensor Type);(SensorData Information)
-            // ex : 122;Humidity;50%
-            String msg = h.getId() + ";" + h.getType()+ ";" + h.getInfoUpdate();
-            h.sendPackage(msg, "Light");
+            h.sendData(h.getDataUpdate(),h.getUnit(),SENSOR_NAME);
         }
     }
 
     private int bright;
 
     public Light() throws Exception{
+        //bright = 0;
         bright = rand.nextInt(101);
     }
 
-    public int getBright() {
-        return bright;
-    }
-
-    public String getType(){
+    public String getUnit(){
         return "Brightness";
     }
 
-    public String getInfoUpdate() {
+    public String getDataUpdate() {
         bright += (rand.nextBoolean() ? 1 : -1);
         if(bright >= 100) bright -= 1;
         if(bright <= 0) bright += 1;

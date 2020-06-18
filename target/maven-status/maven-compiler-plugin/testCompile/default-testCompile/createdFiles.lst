@@ -1,5 +1,7 @@
-Zentral\MockSocket.class
-Zentral\HTTPServerTest.class
-Zentral\UDPClientTest.class
-Zentral\UDPTest.class
-Zentral\MockSocket$1.class
+ProviderServer/ProviderServerTest.class
+Zentral/MockSocket.class
+ProviderServer/ProviderServerTest$1.class
+Zentral/UDPClientTest.class
+Zentral/MockSocket$1.class
+Zentral/UDPTest.class
+Zentral/HTTPServerTest.class

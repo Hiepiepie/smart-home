@@ -113,23 +113,21 @@ public class JavaHTTPServer implements Runnable{
     private String handleGetHead(PrintWriter out, BufferedOutputStream dataOut, String fileRequested, String method) throws IOException {
         String content;
         String dataRequested = "0";
-        System.out.println(fileRequested);
         if(fileRequested.contains("/id")){
             dataRequested = fileRequested.substring(fileRequested.indexOf("=")+1);
-            fileRequested = fileRequested.substring(0,fileRequested.indexOf("/id"));
+            fileRequested = fileRequested.substring(1,fileRequested.indexOf("/id"));
         }
-        System.out.println(dataRequested);
+        System.out.println("requested" + fileRequested);
         switch(fileRequested) {
             case "/thermometer":
             {
                 File parent;
                 File file;
-                if(searchSensorData(RESOURCE_FOLDER + separator + "Temperatur/log.html", dataRequested)){
-                    System.out.println("hey");
+                if(searchSensorData(RESOURCE_FOLDER + separator + "Thermometer/log.html", dataRequested)){
                     parent = new File(HTML_FOLDER);
                     file = new File(parent, "data.html");
                 } else {
-                    parent = new File(RESOURCE_FOLDER + separator + "Temperatur");
+                    parent = new File(RESOURCE_FOLDER + separator + "Thermometer");
                     file = new File(parent, "log.html");
                 }
                 int fileLength = (int) file.length();
@@ -147,12 +145,12 @@ public class JavaHTTPServer implements Runnable{
             {
                 File parent;
                 File file;
-                if(searchSensorData(RESOURCE_FOLDER + separator + "Humidity/log.html", dataRequested)){
+                if(searchSensorData(RESOURCE_FOLDER + separator + "Hygrometer/log.html", dataRequested)){
                     parent = new File(HTML_FOLDER);
                     file = new File(parent, "data.html");
 
                 } else{
-                    parent = new File(RESOURCE_FOLDER + separator + "Humidity");
+                    parent = new File(RESOURCE_FOLDER + separator + "Hygrometer");
                     file = new File(parent, "log.html");
                 }
                 int fileLength = (int) file.length();
@@ -170,11 +168,11 @@ public class JavaHTTPServer implements Runnable{
             {
                 File parent;
                 File file;
-                if(searchSensorData(RESOURCE_FOLDER + separator + "Brightness/log.html", dataRequested)){
+                if(searchSensorData(RESOURCE_FOLDER + separator + "Light/log.html", dataRequested)){
                     parent = new File(HTML_FOLDER);
                     file = new File(parent, "data.html");
                 } else {
-                    parent = new File(RESOURCE_FOLDER + separator + "Brightness");
+                    parent = new File(RESOURCE_FOLDER + separator + "Light");
                     file = new File(parent, "log.html");
                 }
                 int fileLength = (int) file.length();
@@ -202,17 +200,6 @@ public class JavaHTTPServer implements Runnable{
                 break;
             }
         }
-//        File file = new File(WEB_ROOT, fileRequested);
-//        int fileLength = (int) file.length();
-//        String content = getContentType(fileRequested);
-//
-//        if (method.equals("GET")) { // GET method so we return content
-//            byte[] fileData = readFileData(file, fileLength);
-//            // send HTTP Headers
-//            out.println("HTTP/1.1 200 OK");
-//            outHeader(out, dataOut, fileLength, content, fileData);
-//        }
-
         return content;
     }
 

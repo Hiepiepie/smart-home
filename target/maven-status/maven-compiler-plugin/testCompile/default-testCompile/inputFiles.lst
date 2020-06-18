@@ -1,4 +1,5 @@
-D:\Studium\VS\smart-home\src\test\java\Zentral\HTTPServerTest.java
-D:\Studium\VS\smart-home\src\test\java\Zentral\MockSocket.java
-D:\Studium\VS\smart-home\src\test\java\Zentral\UDPClientTest.java
-D:\Studium\VS\smart-home\src\test\java\Zentral\UDPTest.java
+/home/kevin/IdeaProjects/smart-home/src/test/java/ProviderServer/ProviderServerTest.java
+/home/kevin/IdeaProjects/smart-home/src/test/java/Zentral/UDPTest.java
+/home/kevin/IdeaProjects/smart-home/src/test/java/Zentral/UDPClientTest.java
+/home/kevin/IdeaProjects/smart-home/src/test/java/Zentral/HTTPServerTest.java
+/home/kevin/IdeaProjects/smart-home/src/test/java/Zentral/MockSocket.java

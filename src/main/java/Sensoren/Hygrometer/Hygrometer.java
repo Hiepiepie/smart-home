@@ -4,14 +4,15 @@ import Sensoren.UDPClient;
 
 public class Hygrometer extends UDPClient {
 
+    private static final String SENSOR_NAME = "Hygrometer";
+
     public static void main(String[] args) throws Exception {
-        System.out.println("Hygrometer started");
+        Thread.sleep(5000);
         Hygrometer h = new Hygrometer();
+        h.connectMqtt();
+        System.out.println("Hygrometer started");
         while (true){
-            //msg will be in Form like : (SensorData ID);(Sensor Type);(SensorData Information)
-            // ex : 122;Humidity;50%
-            String msg = h.getId() + ";" + h.getType()+ ";" + h.getInfoUpdate();
-            h.sendPackage(msg, "Hygrometer");
+            h.sendData(h.getDataUpdate(),h.getUnit(),SENSOR_NAME);
         }
     }
 
@@ -21,15 +22,11 @@ public class Hygrometer extends UDPClient {
         hum = rand.nextInt(101);
     }
 
-    public int getHum() {
-        return hum;
-    }
-
-    public String getType(){
+    public String getUnit(){
         return "Humidity";
     }
 
-    public String getInfoUpdate() {
+    public String getDataUpdate() {
         hum += (rand.nextBoolean() ? 1 : -1);
         if(hum >= 100) hum -= 1;
         if(hum <= 0) hum += 1;

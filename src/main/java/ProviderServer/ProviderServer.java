@@ -1,5 +1,7 @@
 package ProviderServer;
 
+import Sensoren.SensorData;
+import ThriftAPI.DataSender;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -14,36 +16,39 @@ import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TTransport;
+import com.google.gson.Gson;
 
 public class ProviderServer {
 
   static String separator = File.separator;
-  //static final String RESOURCE_FOLDER = "src" + separator + "main" + separator + "resources" + separator + "ProviderServerDatas";
   static final String RESOURCE_FOLDER = "classes" + separator + "ProviderServerDatas";
 
   public static void main(String[] args) {
     ProviderServer providerServer = new ProviderServer();
     try {
       TTransport transport;
-      transport = new TSocket("localhost", 9090);
+      transport = new TSocket("172.20.1.8", 9090);
       try{
         transport.open();
         TProtocol protocol = new TBinaryProtocol(transport);
         DataSender.Client client = new DataSender.Client(protocol);
         while (true){
-          String msg;
-          msg = client.getSensorData("Thermometer");
-          System.out.println("Provider Server : Data Received => " + msg);
-          if(!msg.equals("no data"))
-            providerServer.saveData(msg);
-          msg = client.getSensorData("Hygrometer");
-          System.out.println("Provider Server : Data Received => " + msg);
-          if(!msg.equals("no data"))
-            providerServer.saveData(msg);
-          msg =  client.getSensorData("Light");
-          System.out.println("Provider Server : Data Received => " + msg);
-          if(!msg.equals("no data"))
-            providerServer.saveData(msg);
+          String sensorDataJson;
+          sensorDataJson = client.getSensorData("Thermometer");
+          System.out.println("Provider Server : Data Received => " + sensorDataJson);
+          if(!sensorDataJson.contains("no data"))
+            providerServer.saveData(sensorDataJson);
+
+          sensorDataJson = client.getSensorData("Hygrometer");
+          System.out.println("Provider Server : Data Received => " + sensorDataJson);
+          if(!sensorDataJson.contains("no data"))
+            providerServer.saveData(sensorDataJson);
+
+          sensorDataJson =  client.getSensorData("Light");
+          System.out.println("Provider Server : Data Received => " + sensorDataJson);
+          if(!sensorDataJson.contains("no data"))
+            providerServer.saveData(sensorDataJson);
+
           Thread.sleep(1000);
         }
       } catch (InterruptedException e) {
@@ -56,22 +61,20 @@ public class ProviderServer {
     }
   }
 
-  private void saveData(String data){
-    String[] msgArray = data.split(";");
-    int idClient = Integer.parseInt(msgArray[0]);
-    String typeClient = msgArray[1];
-    String infoClient = msgArray[2];
+  private void saveData(String sensorDataJson){
+    Gson gson = new Gson();
+    SensorData sensorData = gson.fromJson(sensorDataJson, SensorData.class);
     String separator = File.separator;
-    String PATH = RESOURCE_FOLDER + separator + typeClient + ".html";
+    String PATH = RESOURCE_FOLDER + separator + sensorData.getName() + ".html";
     Path path = Paths.get(PATH);
     Date today = new Date();
     try {
       if (Files.notExists(path)) {
         File oFile = new File(PATH);
         oFile.createNewFile();
-        appendToFile(today, typeClient, infoClient, idClient, PATH);
+        appendToFile(today,sensorData, PATH);
       } else {
-        appendToFile(today, typeClient, infoClient, idClient, PATH);
+        appendToFile(today, sensorData, PATH);
       }
     } catch ( Exception e){
       e.printStackTrace();
@@ -79,28 +82,12 @@ public class ProviderServer {
 
   }
 
-  private void appendToFile(Date date, String type, String info, int idClient, String PATH) {
-    String device;
-    switch (type){
-      case("Temperatur"):
-        device = "thermometer";
-        break;
-
-      case("Brightness"):
-        device = "light";
-        break;
-
-      case("Humidity"):
-        device = "hygrometer";
-        break;
-
-      default: device = " ";
-    }
+  private void appendToFile(Date date, SensorData sensorData, String PATH) {
     try(FileWriter fw = new FileWriter(PATH, true);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter out = new PrintWriter(bw)) {
       out.println("<br>********************************************<br>"
-          + device + "/id=" + idClient + "\"> " + date + " </a><br>" + "<p style=\"color: orangered\">"+type + " " + info + " | ID : " + idClient +"</p>" );
+          + date + " </a><br>" + "<p style=\"color: orangered\">"+ sensorData.getUnit() + " " + sensorData.getData() + " | ID : " + sensorData.getId() +"</p>" );
     } catch (IOException e) {
       e.printStackTrace();
       //exception handling left as an exercise for the reader

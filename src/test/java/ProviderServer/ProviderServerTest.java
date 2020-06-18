@@ -1,11 +1,14 @@
 package ProviderServer;
 
-import Sensoren.Thermometer.Thermometer;
-import Zentral.JavaHTTPServer;
-import Zentral.MockSocket;
+import Sensoren.SensorData;
+import ThriftAPI.DataSender;
+import Zentral.DataSenderHandler;
+import com.google.gson.Gson;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
@@ -92,17 +95,25 @@ public class ProviderServerTest {
   }
 
   @Test
-  public void requestDataTest() throws TException {
-    String sentData = "Test Data";
-    handler.setCurrentData(sentData,"Temperatur");
+  public void requestDataTest() throws TException, UnknownHostException {
+    Gson gson = new Gson();
+    SensorData sentSensorData = new SensorData(1, "Thermometer", "Test Data", "Test unit", InetAddress.getLocalHost());
+    handler.addNewData(sentSensorData);
     String receivedData =  client.getSensorData("Thermometer");
-    assertEquals(sentData,receivedData);
-    handler.setCurrentData(sentData,"Humidity");
+    SensorData receivedSensorData = gson.fromJson(receivedData, SensorData.class);
+    assertEquals(sentSensorData.getData(),receivedSensorData.getData());
+
+    sentSensorData = new SensorData(1, "Hygrometer", "Test Data", "Test unit", InetAddress.getLocalHost());
+    handler.addNewData(sentSensorData);
     receivedData =  client.getSensorData("Hygrometer");
-    assertEquals(sentData,receivedData);
-    handler.setCurrentData(sentData,"Brightness");
+    receivedSensorData = gson.fromJson(receivedData, SensorData.class);
+    assertEquals(sentSensorData.getData(),receivedSensorData.getData());
+
+    sentSensorData = new SensorData(1, "Light", "Test Data", "Test unit", InetAddress.getLocalHost());
+    handler.addNewData(sentSensorData);
     receivedData =  client.getSensorData("Light");
-    assertEquals(sentData,receivedData);
+    receivedSensorData = gson.fromJson(receivedData, SensorData.class);
+    assertEquals(sentSensorData.getData(),receivedSensorData.getData());
   }
 
   @Test
@@ -123,10 +134,7 @@ public class ProviderServerTest {
 
   @Test
   public void noSensorDataRequestTest() throws TException {
-    String sentData = "Test Data";
-    handler.setCurrentData(sentData,"Temperatur");
     String receivedData =  client.getSensorData("Thermometer");
-    receivedData =  client.getSensorData("Thermometer");
     assertEquals("no data", receivedData);
   }
 
