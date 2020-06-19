@@ -1,8 +1,8 @@
 package Sensoren.Light;
 
-import Sensoren.UDPClient;
+import Sensoren.Sensor;
 
-public class Light extends UDPClient {
+public class Light extends Sensor {
 
     private static final String SENSOR_NAME = "Light";
 

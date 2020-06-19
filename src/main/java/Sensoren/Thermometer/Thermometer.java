@@ -1,8 +1,8 @@
 package Sensoren.Thermometer;
 
-import Sensoren.UDPClient;
+import Sensoren.Sensor;
 
-public class Thermometer extends UDPClient {
+public class Thermometer extends Sensor {
 
     private static final String SENSOR_NAME = "Thermometer";
 

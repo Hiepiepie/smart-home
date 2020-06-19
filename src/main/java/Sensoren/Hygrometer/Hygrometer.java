@@ -1,8 +1,8 @@
 package Sensoren.Hygrometer;
 
-import Sensoren.UDPClient;
+import Sensoren.Sensor;
 
-public class Hygrometer extends UDPClient {
+public class Hygrometer extends Sensor {
 
     private static final String SENSOR_NAME = "Hygrometer";
 
