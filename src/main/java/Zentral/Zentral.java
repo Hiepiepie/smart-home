@@ -138,7 +138,7 @@ public class Zentral implements Runnable, MqttCallback {
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw)) {
             out.println("<br>********************************************<br>"
-                + "<a href=\"http://localhost:8080/" + sensorData.getName() + "/id=" + sensorData.getId() + "\"> "
+                + "<a href=\"http://localhost:8080/" + sensorData.getName().toLowerCase() + "/id=" + sensorData.getId() + "\"> "
                 + date + " </a><br>" + "<p style=\"color: orangered\">"+ sensorData.getUnit() + " " + sensorData.getData() + " | ID : " + sensorData.getId() +"</p>" );
         } catch (IOException e) {
             e.printStackTrace();
