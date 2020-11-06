@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="smart-home" />
+        <module name="Smart-Home" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="smart-home" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

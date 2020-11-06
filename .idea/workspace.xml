@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -16,13 +19,7 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated />
@@ -33,13 +30,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="Test for Mqtt implemented">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_21.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Zentral/Zentral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Zentral/MqttTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Zentral/MqttTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b1da508-a28d-43e8-8cb7-4456fc42f059" name="Default Changelist" comment="finish" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,14 +49,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Test" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -74,9 +58,6 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1bmSQQvjXRRJ9VtBq3oBTcEYvCy" />
-  <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -89,41 +70,42 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../smart-home/Smart-Home" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="Zentral" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren" />
-      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren\Hygrometer" />
-      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren\Light" />
-      <recent name="D:\Studium\VS\smart-home" />
-      <recent name="D:\Studium\VS\smart-home\src\test\java" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Zentral_Sensor" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Studium\VS\smart-home\src\main\java\Sensoren\Thermometer" />
-      <recent name="D:\Studium\VS\smart-home" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Studium\VS\smart-home\src\test\java" />
       <recent name="D:\Studium\VS\smart-home\src\main\java" />
-      <recent name="D:\Studium\VS\smart-home\src\main\java\ProviderServer" />
-      <recent name="D:\Studium\VS\smart-home\src\main\java\Zentral" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MqttTest">
-    <configuration name="Hygrometer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Zentral.HTTPServerTest" />
+  <component name="RunManager">
+    <configuration name="Thermometer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Zentral_Sensor.Thermometer" />
       <module name="smart-home" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Sensoren.Hygrometer.*" />
+          <option name="PATTERN" value="Zentral_Sensor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Zentral" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Zentral_Sensor.Zentral" />
+      <module name="smart-home" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Zentral_Sensor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,67 +114,14 @@
       </method>
     </configuration>
     <configuration name="mainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Sensoren.mainClass" />
+      <option name="MAIN_CLASS_NAME" value="mainClass" />
       <module name="smart-home" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sensoren.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in smart-home" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="smart-home" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MqttTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="smart-home" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Zentral.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Zentral" />
-      <option name="MAIN_CLASS_NAME" value="Zentral.MqttTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MqttTest.publishMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="smart-home" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Zentral.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Zentral" />
-      <option name="MAIN_CLASS_NAME" value="Zentral.MqttTest" />
-      <option name="METHOD_NAME" value="publishMessageTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.MqttTest" />
-        <item itemvalue="JUnit.MqttTest.publishMessageTest" />
-        <item itemvalue="Application.Hygrometer" />
-        <item itemvalue="Application.mainClass (1)" />
-        <item itemvalue="JUnit.All in smart-home" />
-      </list>
-    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -213,43 +142,8 @@
       <workItem from="1589467570874" duration="9591000" />
       <workItem from="1589477378514" duration="2955000" />
       <workItem from="1589480426714" duration="7932000" />
-      <workItem from="1589489812024" duration="298000" />
-      <workItem from="1589490209622" duration="183000" />
-      <workItem from="1589490546476" duration="661000" />
-      <workItem from="1589638111938" duration="173000" />
-      <workItem from="1589668077059" duration="493000" />
-      <workItem from="1589796814676" duration="132000" />
-      <workItem from="1589799647963" duration="999000" />
-      <workItem from="1589805993251" duration="2258000" />
-      <workItem from="1590080218227" duration="49000" />
-      <workItem from="1590275030625" duration="692000" />
-      <workItem from="1590472524637" duration="489000" />
-      <workItem from="1590601107203" duration="17000" />
-      <workItem from="1590601622697" duration="102000" />
-      <workItem from="1590602460126" duration="442000" />
-      <workItem from="1590642545031" duration="992000" />
-      <workItem from="1590643566467" duration="198000" />
-      <workItem from="1590643775475" duration="158000" />
-      <workItem from="1590643995719" duration="944000" />
-      <workItem from="1590868502217" duration="128000" />
-      <workItem from="1590942648149" duration="42000" />
-      <workItem from="1590942697994" duration="6113000" />
-      <workItem from="1590949255893" duration="2764000" />
-      <workItem from="1591006261974" duration="216000" />
-      <workItem from="1591040880210" duration="68000" />
-      <workItem from="1591040949576" duration="2153000" />
-      <workItem from="1591043374235" duration="6854000" />
-      <workItem from="1591070948602" duration="7030000" />
-      <workItem from="1591078998815" duration="3097000" />
-      <workItem from="1591340098022" duration="348000" />
-      <workItem from="1591617921793" duration="637000" />
-      <workItem from="1591619672691" duration="474000" />
-      <workItem from="1591620509994" duration="4119000" />
-      <workItem from="1592211434309" duration="185000" />
-      <workItem from="1592301692211" duration="1372000" />
-      <workItem from="1592429912403" duration="341000" />
-      <workItem from="1592430472905" duration="14347000" />
-      <workItem from="1592575758024" duration="7833000" />
+      <workItem from="1589489742141" duration="69000" />
+      <workItem from="1604660562563" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="reconstruct">
       <created>1589275234692</created>
@@ -321,156 +215,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589489339225</updated>
     </task>
-    <task id="LOCAL-00011" summary="finish">
-      <created>1589489853619</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1589489853619</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update details">
-      <created>1589668552858</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1589668552858</updated>
-    </task>
-    <task id="LOCAL-00013" summary="praktikum 4 init">
-      <created>1590602578823</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1590602578823</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Temporar">
-      <created>1590951939842</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1590951939842</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Temporar">
-      <created>1590951950216</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1590951950216</updated>
-    </task>
-    <task id="LOCAL-00016" summary="minor changes">
-      <created>1591006273261</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1591006273261</updated>
-    </task>
-    <task id="LOCAL-00017" summary="first Draft">
-      <created>1591070527303</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1591070527303</updated>
-    </task>
-    <task id="LOCAL-00018" summary="reconstruct">
-      <created>1591070624660</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1591070624660</updated>
-    </task>
-    <task id="LOCAL-00019" summary="reconstruct">
-      <created>1591070629142</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1591070629142</updated>
-    </task>
-    <task id="LOCAL-00020" summary="add configure network">
-      <created>1591074381296</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1591074381296</updated>
-    </task>
-    <task id="LOCAL-00021" summary="add configure network">
-      <created>1591074387212</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1591074387212</updated>
-    </task>
-    <task id="LOCAL-00022" summary="add portainer manager">
-      <created>1591075106208</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1591075106208</updated>
-    </task>
-    <task id="LOCAL-00023" summary="add portainer manager">
-      <created>1591075208602</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1591075208602</updated>
-    </task>
-    <task id="LOCAL-00024" summary="option2">
-      <created>1591080599779</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1591080599779</updated>
-    </task>
-    <task id="LOCAL-00025" summary="minor changes">
-      <created>1591340147134</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1591340147134</updated>
-    </task>
-    <task id="LOCAL-00026" summary="blah blah">
-      <created>1591624669855</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1591624669855</updated>
-    </task>
-    <task id="LOCAL-00027" summary="MQTT implemented. left Test for MQTT to do">
-      <created>1592514837579</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1592514837579</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Test for Mqtt implemented">
-      <created>1592587007606</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1592587007606</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -478,158 +234,91 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="reconstruct" />
     <MESSAGE value="server now create and save log data of sensors" />
     <MESSAGE value="Finish praktikum 3" />
     <MESSAGE value="finish" />
-    <MESSAGE value="update details" />
-    <MESSAGE value="praktikum 4 init" />
-    <MESSAGE value="Temporar" />
-    <MESSAGE value="first Draft" />
-    <MESSAGE value="reconstruct" />
-    <MESSAGE value="add configure network" />
-    <MESSAGE value="add portainer manager" />
-    <MESSAGE value="option2" />
-    <MESSAGE value="minor changes" />
-    <MESSAGE value="blah blah" />
-    <MESSAGE value="MQTT implemented. left Test for MQTT to do" />
-    <MESSAGE value="Test for Mqtt implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test for Mqtt implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1071" y="173" key="#Dockerfile" timestamp="1589490324656">
-      <screen x="0" y="0" width="1962" height="1152" />
-    </state>
-    <state x="1071" y="173" key="#Dockerfile/0.0.1962.1152@0.0.1962.1152" timestamp="1589490324656" />
     <state x="466" y="150" key="#Project_Structure" timestamp="1589389299072">
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="466" y="150" key="#Project_Structure/0.0.1970.1152@0.0.1970.1152" timestamp="1589389299072" />
-    <state x="100" y="127" width="1720" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1592586356603">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="100" y="127" width="1720" height="853" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1592586356603" />
-    <state x="771" y="285" width="374" height="594" key="#com.intellij.ide.util.MemberChooser" timestamp="1592583849843">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="788" y="282" key="#com.intellij.ide.util.MemberChooser" timestamp="1589478638524">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
     <state x="788" y="282" key="#com.intellij.ide.util.MemberChooser/0.0.1962.1152@0.0.1962.1152" timestamp="1589478638524" />
     <state x="791" y="282" key="#com.intellij.ide.util.MemberChooser/0.0.1970.1152@0.0.1970.1152" timestamp="1589409415578" />
-    <state x="771" y="285" width="374" height="594" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1592583849843" />
-    <state x="717" y="419" width="486" height="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592500838454">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="717" y="419" width="486" height="283" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1920.1053@0.27.1920.1053" timestamp="1592500838454" />
     <state x="516" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589343936444">
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="516" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1970.1152@0.0.1970.1152" timestamp="1589343936444" />
-    <state x="93" y="93" width="1776" height="966" key="DiffContextDialog" timestamp="1590643933242">
+    <state x="766" y="331" key="FileChooserDialogImpl" timestamp="1589489809359">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state x="93" y="93" width="1776" height="966" key="DiffContextDialog/0.0.1962.1152@0.0.1962.1152" timestamp="1590643933242" />
-    <state x="750" y="330" width="424" height="491" key="FileChooserDialogImpl" timestamp="1592509672422">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="766" y="331" key="FileChooserDialogImpl/0.0.1962.1152@0.0.1962.1152" timestamp="1589489809359" />
+    <state width="1919" height="392" key="GridCell.Tab.0.bottom" timestamp="1589489369597">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state x="766" y="331" key="FileChooserDialogImpl/0.0.1962.1152@0.0.1962.1152" timestamp="1590080260871" />
-    <state x="750" y="330" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1592509672422" />
-    <state width="1874" height="265" key="GridCell.Tab.0.bottom" timestamp="1592589275567">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1919" height="185" key="GridCell.Tab.0.bottom/0.0.1962.1152@0.0.1962.1152" timestamp="1591078698014" />
+    <state width="1919" height="392" key="GridCell.Tab.0.bottom/0.0.1962.1152@0.0.1962.1152" timestamp="1589489369597" />
     <state width="1928" height="319" key="GridCell.Tab.0.bottom/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1874" height="265" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1592589275567" />
-    <state width="1874" height="265" key="GridCell.Tab.0.center" timestamp="1592589275566">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="392" key="GridCell.Tab.0.center" timestamp="1589489369597">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="185" key="GridCell.Tab.0.center/0.0.1962.1152@0.0.1962.1152" timestamp="1591078698014" />
+    <state width="1919" height="392" key="GridCell.Tab.0.center/0.0.1962.1152@0.0.1962.1152" timestamp="1589489369597" />
     <state width="1928" height="319" key="GridCell.Tab.0.center/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1874" height="265" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1592589275566" />
-    <state width="1874" height="265" key="GridCell.Tab.0.left" timestamp="1592589275566">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="392" key="GridCell.Tab.0.left" timestamp="1589489369597">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="185" key="GridCell.Tab.0.left/0.0.1962.1152@0.0.1962.1152" timestamp="1591078698014" />
+    <state width="1919" height="392" key="GridCell.Tab.0.left/0.0.1962.1152@0.0.1962.1152" timestamp="1589489369597" />
     <state width="1928" height="319" key="GridCell.Tab.0.left/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1874" height="265" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1592589275566" />
-    <state width="1874" height="265" key="GridCell.Tab.0.right" timestamp="1592589275567">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="392" key="GridCell.Tab.0.right" timestamp="1589489369597">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="185" key="GridCell.Tab.0.right/0.0.1962.1152@0.0.1962.1152" timestamp="1591078698014" />
+    <state width="1919" height="392" key="GridCell.Tab.0.right/0.0.1962.1152@0.0.1962.1152" timestamp="1589489369597" />
     <state width="1928" height="319" key="GridCell.Tab.0.right/0.0.1970.1152@0.0.1970.1152" timestamp="1589412111171" />
-    <state width="1874" height="265" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1592589275567" />
-    <state width="1920" height="349" key="GridCell.Tab.1.bottom" timestamp="1592586039074">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="392" key="GridCell.Tab.1.bottom" timestamp="1589489369597">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="392" key="GridCell.Tab.1.bottom/0.0.1962.1152@0.0.1962.1152" timestamp="1590645170697" />
+    <state width="1919" height="392" key="GridCell.Tab.1.bottom/0.0.1962.1152@0.0.1962.1152" timestamp="1589489369597" />
     <state width="1928" height="392" key="GridCell.Tab.1.bottom/0.0.1970.1152@0.0.1970.1152" timestamp="1589407209639" />
-    <state width="1920" height="349" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1592586039074" />
-    <state width="1920" height="349" key="GridCell.Tab.1.center" timestamp="1592586039073">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="392" key="GridCell.Tab.1.center" timestamp="1589489369597">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="392" key="GridCell.Tab.1.center/0.0.1962.1152@0.0.1962.1152" timestamp="1590645170697" />
+    <state width="1919" height="392" key="GridCell.Tab.1.center/0.0.1962.1152@0.0.1962.1152" timestamp="1589489369597" />
     <state width="1928" height="392" key="GridCell.Tab.1.center/0.0.1970.1152@0.0.1970.1152" timestamp="1589407209639" />
-    <state width="1920" height="349" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1592586039073" />
-    <state width="1920" height="349" key="GridCell.Tab.1.left" timestamp="1592586039073">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="392" key="GridCell.Tab.1.left" timestamp="1589489369597">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="392" key="GridCell.Tab.1.left/0.0.1962.1152@0.0.1962.1152" timestamp="1590645170697" />
+    <state width="1919" height="392" key="GridCell.Tab.1.left/0.0.1962.1152@0.0.1962.1152" timestamp="1589489369597" />
     <state width="1928" height="392" key="GridCell.Tab.1.left/0.0.1970.1152@0.0.1970.1152" timestamp="1589407209639" />
-    <state width="1920" height="349" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1592586039073" />
-    <state width="1920" height="349" key="GridCell.Tab.1.right" timestamp="1592586039073">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state width="1919" height="392" key="GridCell.Tab.1.right" timestamp="1589489369597">
+      <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state width="1919" height="392" key="GridCell.Tab.1.right/0.0.1962.1152@0.0.1962.1152" timestamp="1590645170697" />
+    <state width="1919" height="392" key="GridCell.Tab.1.right/0.0.1962.1152@0.0.1962.1152" timestamp="1589489369597" />
     <state width="1928" height="392" key="GridCell.Tab.1.right/0.0.1970.1152@0.0.1970.1152" timestamp="1589407209639" />
-    <state width="1920" height="349" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1592586039073" />
     <state x="516" y="231" key="Maven.ArtifactSearchDialog" timestamp="1589400572498">
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="516" y="231" key="Maven.ArtifactSearchDialog/0.0.1970.1152@0.0.1970.1152" timestamp="1589400572498" />
-    <state x="189" y="97" key="MergeDialog" timestamp="1590868542837">
-      <screen x="0" y="0" width="1962" height="1152" />
-    </state>
-    <state x="189" y="97" key="MergeDialog/0.0.1962.1152@0.0.1962.1152" timestamp="1590868542837" />
-    <state x="863" y="442" width="385" height="267" key="MultipleFileMergeDialog" timestamp="1590868531827">
-      <screen x="0" y="0" width="1962" height="1152" />
-    </state>
-    <state x="863" y="442" width="385" height="267" key="MultipleFileMergeDialog/0.0.1962.1152@0.0.1962.1152" timestamp="1590868531827" />
     <state x="762" y="207" width="438" height="775" key="RefactorJ.IntroduceParameterObject" timestamp="1589471915894">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
     <state x="762" y="207" width="438" height="775" key="RefactorJ.IntroduceParameterObject/0.0.1962.1152@0.0.1962.1152" timestamp="1589471915894" />
-    <state x="744" y="245" width="422" height="623" key="RollbackChangesDialog" timestamp="1591339814365">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="744" y="245" width="422" height="623" key="RollbackChangesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1591339814365" />
     <state x="466" y="150" key="SettingsEditor" timestamp="1589384635810">
       <screen x="0" y="0" width="1970" height="1152" />
     </state>
     <state x="466" y="150" key="SettingsEditor/0.0.1970.1152@0.0.1970.1152" timestamp="1589384635810" />
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1591340149318">
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2" timestamp="1589489343239">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
-    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591340149318" />
+    <state x="576" y="309" key="Vcs.Push.Dialog.v2/0.0.1962.1152@0.0.1962.1152" timestamp="1589489343239" />
     <state x="578" y="309" key="Vcs.Push.Dialog.v2/0.0.1970.1152@0.0.1970.1152" timestamp="1589275245392" />
-    <state x="732" y="310" key="VcsDiffUtil.ChangesDialog" timestamp="1590643801804">
-      <screen x="0" y="0" width="1962" height="1152" />
+    <state x="796" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589343839006">
+      <screen x="0" y="0" width="1970" height="1152" />
     </state>
-    <state x="732" y="310" key="VcsDiffUtil.ChangesDialog/0.0.1962.1152@0.0.1962.1152" timestamp="1590643801804" />
-    <state x="1254" y="531" width="515" height="448" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize" timestamp="1589490304456">
-      <screen x="0" y="0" width="1962" height="1152" />
-    </state>
-    <state x="1254" y="531" width="515" height="448" key="com.intellij.docker.deployment.ui.DockerPortBindingsField.v173.dialogSize/0.0.1962.1152@0.0.1962.1152" timestamp="1589490304456" />
-    <state x="1254" y="531" width="391" height="372" key="com.intellij.docker.deployment.ui.DockerVolumeBindingsField.v173.dialogSize" timestamp="1589490316313">
-      <screen x="0" y="0" width="1962" height="1152" />
-    </state>
-    <state x="1254" y="531" width="391" height="372" key="com.intellij.docker.deployment.ui.DockerVolumeBindingsField.v173.dialogSize/0.0.1962.1152@0.0.1962.1152" timestamp="1589490316313" />
-    <state x="570" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591361846139">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="570" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1591361846139" />
-    <state x="776" y="475" width="450" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592211460770">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="793" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1962.1152@0.0.1962.1152" timestamp="1591040933358" />
     <state x="796" y="490" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1970.1152@0.0.1970.1152" timestamp="1589343839006" />
-    <state x="776" y="475" width="450" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1592211460770" />
     <state x="540" y="305" width="891" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1589445758235">
       <screen x="0" y="0" width="1962" height="1152" />
     </state>
@@ -648,16 +337,5 @@
     </state>
     <state x="777" y="323" key="refactoring.ChangeSignatureDialog/0.0.1962.1152@0.0.1962.1152" timestamp="1589472663247" />
     <state x="780" y="323" key="refactoring.ChangeSignatureDialog/0.0.1970.1152@0.0.1970.1152" timestamp="1589348041947" />
-    <state x="630" y="258" width="672" height="620" key="search.everywhere.popup" timestamp="1591355080729">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="644" y="253" width="672" height="678" key="search.everywhere.popup/0.0.1962.1152@0.0.1962.1152" timestamp="1591006476229" />
-    <state x="630" y="258" width="672" height="620" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1591355080729" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/smart_home$All_in_smart_home.ic" NAME="All in smart-home Coverage Results" MODIFIED="1590472931031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/smart_home$HTTPServerTest_serverAcceptConnectionTest.ic" NAME="HTTPServerTest.serverAcceptConnectionTest Coverage Results" MODIFIED="1590472971313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Zentral.*</FILTER>
-    </SUITE>
   </component>
 </project>

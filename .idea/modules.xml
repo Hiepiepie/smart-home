@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/smart-home.iml" filepath="$PROJECT_DIR$/smart-home.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vs-praktikum-ss20-fehr-mo4x-adithanakevin-letrunghieu.iml" filepath="$PROJECT_DIR$/.idea/vs-praktikum-ss20-fehr-mo4x-adithanakevin-letrunghieu.iml" />
     </modules>
   </component>
 </project>
